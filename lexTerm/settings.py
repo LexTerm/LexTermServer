@@ -157,3 +157,11 @@ LOGGING = {
         },
     }
 }
+
+# Load separate settings file for development and production-specific settings
+# Do not add local_settings.py to version control
+try:
+    execfile('local_settings.py')
+except IOError:
+    pass
+
