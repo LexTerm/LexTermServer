@@ -19,9 +19,11 @@ Development
     cd server
     source bin/activate
     pip install django==1.4
-    git clone git@github.com:LexTerm/LexTermServer.git
+    git clone git@github.com:LexTerm/LexTermServer.git lexTerm
 
 ### Run it ###
-    cd LexTermServer
+    cd lexTerm
     python manage.py runserver
 
+### Deploy ###
+with rsync
