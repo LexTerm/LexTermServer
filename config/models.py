@@ -2,6 +2,7 @@ from django.db import models
 
 class Language(models.Model):
     name = models.CharField(max_length=100)
+    langCode = models.CharField(max_length=100)
 
 class LexicalClass(models.Model):
     name = models.CharField(max_length=100)
@@ -13,7 +14,7 @@ class Form(models.Model):
     lexicalClass = models.ForeignKey(LexicalClass, related_name='lexicalClass')
     derivedLexicalClass = models.OneToOneField(LexicalClass, primary_key=False)
 
-class Representation(models.Model):
+class RepresentationType(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language)
 
