@@ -8,6 +8,9 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'lexTerm.views.home', name='home'),
     # url(r'^lexTerm/', include('lexTerm.foo.urls')),
+    url(r'^api/conf/', include('config.urls')),
+    url(r'^api/lex/', include('lex.urls')),
+    url(r'^api/term/', include('term.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
