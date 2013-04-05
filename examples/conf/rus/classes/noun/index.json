@@ -1,0 +1,27 @@
+{
+	"langCode": "rus",
+	"className": "noun",
+	"lemmas": ["nom sg", "nom pl"],
+	"features": {
+		"number": "number",
+		"case": "case"
+	},
+	"forms": {
+		"nom sg": {
+			"className": "noun",
+			"principle": true,
+			"values": {
+				"number": "sg",
+				"case": "nom"
+			}
+		},
+		"nom pl": {
+			"className": "noun",
+			"principle": false,
+			"values": {
+				"number": "pl",
+				"case": "nom"
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"lexId": "1",
+	"pos": "noun",
+	"lemma": "singular",
+	"forms": {
+		"singular": {
+			"representations": {"written": "cat"},
+			"features": {"number": "sg"}
+		},
+		"plural": {
+			"representations": {"written": "cats"},
+			"features": {"number": "pl"}
+		}
+	},
+	"senses": [
+		{
+			"conceptId": "1",
+			"subjectFields": ["general"],
+			"definitions": {
+				"eng": "a pet",
+				"rus": "domashnoe zhivotnoe"
+			}
+		}
+	]
+}

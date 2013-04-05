@@ -1,0 +1,24 @@
+{
+	"langCode": "eng",
+	"className": "noun",
+	"lemmas": ["singular", "plural"],
+	"features": {
+		"number": "number"
+	},
+	"forms": {
+		"singular": {
+			"className": "noun",
+			"principle": true,
+			"values": {
+				"number": "sg"
+			}
+		},
+		"plural": {
+			"className": "noun",
+			"principle": false,
+			"values": {
+				"number": "pl"
+			}
+		}
+	}
+}
