@@ -1,0 +1,25 @@
+{
+	"result":{
+		"lexId": "1",
+		"pos": "noun",
+		"lemma": "nom sg",
+		"forms": {
+			"nom sg": {
+				"representations": {"written": "kot"}
+			},
+			"nom pl": {
+				"representations": {"written": "koty"}
+			}
+		},
+		"senses": [
+			{
+				"conceptId": "1",
+				"subjectFields": ["general"],
+				"definitions": {
+					"eng": "a pet",
+					"rus": "domashnoe zhivotnoe"
+				}
+			}
+		]
+	}
+}
