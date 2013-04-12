@@ -67,4 +67,3 @@ class FormValue(models.Model):
 
     def __unicode__(self):
         return "%s:%s:%s" % (self.form, self.feature, self.value)
-

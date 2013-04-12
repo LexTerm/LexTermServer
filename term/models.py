@@ -1,5 +1,4 @@
 from django.db import models
-from config.models import *
 from lex.models import *
 
 class TermBase(models.Model):
@@ -37,7 +36,7 @@ class Term(models.Model):
     language = models.ForeignKey(Language)
     termNote = models.TextField()
     usage = models.TextField()
-    lexeme = models.ForeignKey('lex.Lexeme', related_name='relatedTerm')
+    lexeme = models.ForeignKey(Lexeme, related_name='relatedTerm')
 
     def __unicode__(self):
         return self.term

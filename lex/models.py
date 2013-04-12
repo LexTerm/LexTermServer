@@ -1,5 +1,5 @@
 from django.db import models
-from config.models import *
+from config_models import *
 from term.models import *
 
 class Lexeme(models.Model):
