@@ -102,7 +102,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'tunneling.tunneling.TunnelingMiddleware',
+    'tunneling.tunneling.TunnelingMiddleware',
+    'xsaccess.xsaccess.XsAccessMiddleware',
 )
 
 ROOT_URLCONF = 'lexTerm.urls'
@@ -128,6 +129,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'lex',
     'term',
+    'tunneling',
+    'xsaccess'
 )
 
 # A sample logging configuration. The only tangible logging
