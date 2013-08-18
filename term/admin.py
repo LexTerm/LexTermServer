@@ -1,4 +1,4 @@
-from lex.models import *
+from term.models import *
 from django.contrib import admin
 
 admin.site.register(TermBase)
