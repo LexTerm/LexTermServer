@@ -5,9 +5,7 @@ Development
 -----------
 
 ### Prerequisites ###
-* Python (2.6)
-  * If you already have a newer version of python you will need to install 2.6 alongside your
-    current version
+* Python (2.7)
 * pip
   * `easy_install pip`
 * virtualenv
@@ -15,15 +13,30 @@ Development
 
 ### Setup ###
     mkdir lexTerm && cd lexTerm
-    virtualenv -p <path_to_python2.6> --no-site-packages server 
+    virtualenv --no-site-packages server 
     cd server
     source bin/activate
-    pip install django==1.4
     git clone git@github.com:LexTerm/LexTermServer.git lexTerm
+    cd lexTerm
+    pip install -r requirements.txt
+    ./manage.py syncdb
 
 ### Run it ###
-    cd lexTerm
-    python manage.py runserver
+    ./manage.py runserver
+
+Production
+----------
+
+### Setup ###
+* ssh onto the server
+* create a virtual environment
+* `git clone https://github.com/LexTerm/LexTermServer.git lexTerm`
+* `cd lexTerm`
+* `mkdir static`
+* In the webserver document root do `ln -s path/to/lexTerm/static static`
+* follow the django instructions [here]
+  (https://docs.djangoproject.com/en/1.5/howto/deployment/fastcgi/#running-django-on-a-shared-hosting-provider-with-apache)
 
 ### Deploy ###
-with rsync
+* to update, simply `git pull` in the repository
+
