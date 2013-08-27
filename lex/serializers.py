@@ -26,6 +26,13 @@ class RepTypeSerializer(serializers.ModelSerializer):
         model = RepresentationType
         fields = ('name', 'language')
 
+class LexemeSerializer(serializers.ModelSerializer):
+    term = serializers.RelatedField()
+
+    class Meta:
+        model = Lexeme
+        fields = ('name', 'language', 'term')
+
 class FormSerializer(serializers.ModelSerializer):
     values = serializers.RelatedField(many=True)
 

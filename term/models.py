@@ -17,7 +17,7 @@ class Concept(models.Model):
     name = models.CharField(max_length=100)
     termBase = models.ForeignKey(TermBase)
     subjectField = models.ManyToManyField(SubjectField)
-    superOrdinate = models.ForeignKey('self')
+    superOrdinate = models.ForeignKey('self', null=True, blank=True)
 
     def __unicode__(self):
         return self.name

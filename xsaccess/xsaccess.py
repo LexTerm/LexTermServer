@@ -10,7 +10,7 @@ except:
 
 def setHeaders(req, resp):
 	resp['Access-Control-Allow-Origin']  = XS_SHARING_ALLOWED_ORIGINS
-	if req.method === "OPTIONS":
+	if req.method == "OPTIONS":
 		resp['Access-Control-Allow-Methods'] = ",".join(XS_SHARING_ALLOWED_METHODS)
 		if 'HTTP_ACCESS_CONTROL_REQUEST_HEADERS' in req.META:
 			resp['Access-Control-Allow-Headers'] = req.META['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']
