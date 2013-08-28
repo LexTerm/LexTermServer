@@ -75,16 +75,20 @@ class FormValue(models.Model):
     def __unicode__(self):
         return "%s:%s:%s" % (self.form, self.feature, self.value)
 
-class Lexeme(models.Model):
+# Merging Term and Lexeme
+class LexemeTerm(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language)
-    term = models.ForeignKey('term.Term', related_name='relatedLexeme')
+    # term = models.ForeignKey('term.Term', related_name='relatedLexeme')
+    concept = models.ForeignKey('term.Concept', blank=True, null=True)
+    termNote = models.TextField(blank=True)
+    usage = models.TextField(blank=True)
 
     def __unicode__(self):
         return self.name
 
 class Representation(models.Model):
-    lexeme = models.ForeignKey(Lexeme)
+    lexeme = models.ForeignKey(LexemeTerm)
     representationType = models.ForeignKey(RepresentationType)
     name = models.CharField(max_length=100)
 
@@ -92,21 +96,21 @@ class Representation(models.Model):
         return self.name
 
 class PartOfSpeech(models.Model):
-    lexeme = models.ForeignKey(Lexeme)
+    lexeme = models.ForeignKey(LexemeTerm)
     lexicalClass = models.ForeignKey(LexicalClass)
 
     def __unicode__(self):
         return self.lexicalClass
 
 class FeatureSet(models.Model):
-    lexeme = models.ForeignKey(Lexeme)
+    lexeme = models.ForeignKey(LexemeTerm)
     value = models.ForeignKey(EnumValue)
 
     def __unicode__(self):
         return "%s:%s" % (self.lexeme, self.value)
 
 class WordSense(models.Model):
-    lexeme = models.ForeignKey(Lexeme)
+    lexeme = models.ForeignKey(LexemeTerm)
     concept = models.ForeignKey('term.Concept')
     etymology = models.TextField()
     

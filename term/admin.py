@@ -5,5 +5,5 @@ admin.site.register(TermBase)
 admin.site.register(SubjectField)
 admin.site.register(Concept)
 admin.site.register(ConceptDefinition)
-admin.site.register(Term)
+# admin.site.register(Term)
 

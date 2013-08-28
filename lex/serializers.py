@@ -21,17 +21,20 @@ class EnumSerializer(serializers.ModelSerializer):
         model = Enumeration
         fields = ('name', 'language', 'values')
 
+class EnumValueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EnumValue
+        fields = ('name', 'enum')
+
 class RepTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = RepresentationType
         fields = ('name', 'language')
 
 class LexemeSerializer(serializers.ModelSerializer):
-    term = serializers.RelatedField()
-
     class Meta:
-        model = Lexeme
-        fields = ('name', 'language', 'term')
+        model = LexemeTerm
+        fields = ('id', 'name', 'language', 'concept')
 
 class FormSerializer(serializers.ModelSerializer):
     values = serializers.RelatedField(many=True)

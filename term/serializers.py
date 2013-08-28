@@ -9,3 +9,9 @@ class SubjectSerializer(serializers.ModelSerializer):
         model = SubjectField
         fields = ('name',)
 
+# class LexemeSerializer(serializers.ModelSerializer):
+# 
+#     class Meta:
+#         model = LexemeTerm
+#         fields = ('name', 'language', 'concept', 'termNote', 'usage')
+# 

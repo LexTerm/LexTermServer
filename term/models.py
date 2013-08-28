@@ -30,14 +30,15 @@ class ConceptDefinition(models.Model):
     def __unicode__(self):
         return "concept_definition:%s:%s" % (self.concept, self.language)
 
-class Term(models.Model):
-    term = models.CharField(max_length=100)
-    concept = models.ForeignKey(Concept)
-    language = models.ForeignKey('lex.Language')
-    termNote = models.TextField()
-    usage = models.TextField()
-    lexeme = models.ForeignKey('lex.Lexeme', related_name='relatedTerm')
-
-    def __unicode__(self):
-        return self.term
-
+# Try merging lexeme and term
+# class Term(models.Model):
+#     term = models.CharField(max_length=100)
+#     concept = models.ForeignKey(Concept)
+#     language = models.ForeignKey('lex.Language')
+#     termNote = models.TextField()
+#     usage = models.TextField()
+#     lexeme = models.ForeignKey('lex.Lexeme', related_name='relatedTerm')
+# 
+#     def __unicode__(self):
+#         return self.term
+# 
