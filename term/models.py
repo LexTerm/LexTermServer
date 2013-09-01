@@ -15,7 +15,7 @@ class SubjectField(models.Model):
 
 class Concept(models.Model):
     name = models.CharField(max_length=100)
-    termBase = models.ForeignKey(TermBase)
+    # termBase = models.ForeignKey(TermBase)
     subjectField = models.ManyToManyField(SubjectField)
     superOrdinate = models.ForeignKey('self', null=True, blank=True)
 

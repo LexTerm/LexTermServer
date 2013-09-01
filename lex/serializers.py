@@ -14,17 +14,26 @@ class LexicalClassSerializer(serializers.ModelSerializer):
         model = LexicalClass
         fields = ('name', 'language')
 
+class EnumValueSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = EnumValue
+        fields = ('value', 'enum')
+
 class EnumSerializer(serializers.ModelSerializer):
+    # def get_related_field(self, model_field, related_model, to_many):
+    #     kwargs = {
+    #         'queryset': related_model.objects.filter(enum=model_field.name),
+    #         'many': to_many
+    #     }
+    # name = serializers.CharField()
+    # qset = EnumValue.objects.filter(enum=name)
+    # values = serializers.SlugRelatedField(many=True, slug_field='value')
     values = serializers.RelatedField(many=True)
+    # values = EnumValueSerializer(many=True)
 
     class Meta:
         model = Enumeration
         fields = ('name', 'language', 'values')
-
-class EnumValueSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = EnumValue
-        fields = ('name', 'enum')
 
 class RepTypeSerializer(serializers.ModelSerializer):
     class Meta:

@@ -3,17 +3,14 @@ from term.serializers import *
 from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework import status, generics
+from rest_framework import status
+from rest_framework.generics import ListCreateAPIView
+from rest_framework.viewsets import *
 
-class SubjectList(generics.ListAPIView):
+class SubjectView(ListCreateAPIView):
     model = SubjectField
     serializer_class = SubjectSerializer
-
-# class SubjectList(APIView):
-#     def get(self, request, format=None):
-#         subjects = SubjectField.objects.all()
-#         serializer = SubjectSerializer(subjects, many=True)
-#         return Response(serializer.data)
+    lookup_field = 'name'
 
 class ConceptList(APIView):
     def get(self, request, subject=None, format=None):

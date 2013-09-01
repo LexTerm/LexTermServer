@@ -1,4 +1,5 @@
 from rest_framework.filters import BaseFilterBackend
+from lex.models import Enumeration
 
 # We are doing filtering like this because it is based on multiple parameters from the urlconf
 
@@ -7,8 +8,18 @@ class LanguageFilter(BaseFilterBackend):
     Filters querysets based on language
     """
     def filter_queryset(self, request, queryset, view):
-        lang = view.kwargs['lang']
+        lang = view.kwargs['language']
         return queryset.filter(language=lang)
+
+class EnumFilter(BaseFilterBackend):
+    """
+    Filters querysets based on enumeration and language
+    """
+    def filter_queryset(self, request, queryset, view):
+        lang = view.kwargs['language']
+        enumName = view.kwargs['name']
+        enum = Enumeration.objects.get(language=lang, name=enumName)
+        return queryset.filter(enum=enum)
 
 class NameFilter(BaseFilterBackend):
     """

@@ -18,6 +18,9 @@ class LexicalClass(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        unique_together = ('name', 'language')
+
 class Form(models.Model):
     name = models.CharField(max_length=100)
     principle = models.BooleanField()
@@ -34,6 +37,9 @@ class RepresentationType(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        unique_together = ('name', 'language')
+
 class Enumeration(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language)
@@ -41,15 +47,22 @@ class Enumeration(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        unique_together = ('name', 'language')
+
 class EnumValue(models.Model):
-    name = models.CharField(max_length=100)
+    value = models.CharField(max_length=100)
     enum = models.ForeignKey(Enumeration, related_name='values')
 
     def language(self):
-        return self.enum.language.__unicode__()
+        # return self.enum.language.__unicode__()
+        return self.enum.language
 
     def __unicode__(self):
-        return self.name
+        return self.value
+
+    class Meta:
+        unique_together = ('value', 'enum')
 
 class Feature(models.Model):
     name = models.CharField(max_length=100)

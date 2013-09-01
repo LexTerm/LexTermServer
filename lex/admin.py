@@ -19,7 +19,7 @@ class EnumerationAdmin(admin.ModelAdmin):
 admin.site.register(Enumeration, EnumerationAdmin)
 
 class EnumValueAdmin(admin.ModelAdmin):
-    list_display = ('name', 'enum', 'language')
+    list_display = ('value', 'enum', 'language')
 admin.site.register(EnumValue, EnumValueAdmin)
 
 admin.site.register(Feature)
