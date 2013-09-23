@@ -39,4 +39,4 @@ Production
 
 ### Deploy ###
 * to update, simply `git pull` in the repository
-
+* make sure to run `./manage.py syncdb` if any changes were made to database schemas

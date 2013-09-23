@@ -1,0 +1,233 @@
+[
+{
+  "pk": "eng", 
+  "model": "lex.language", 
+  "fields": {
+    "name": "English"
+  }
+},
+{
+  "pk": "spa", 
+  "model": "lex.language", 
+  "fields": {
+    "name": "Spanish"
+  }
+},
+{
+  "pk": 1, 
+  "model": "lex.lexicalclass", 
+  "fields": {
+    "name": "noun", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lex.lexicalclass", 
+  "fields": {
+    "name": "noun", 
+    "language": "spa"
+  }
+},
+{
+  "pk": 3, 
+  "model": "lex.lexicalclass", 
+  "fields": {
+    "name": "verb", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 1, 
+  "model": "lex.representationtype", 
+  "fields": {
+    "name": "written", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lex.representationtype", 
+  "fields": {
+    "name": "written", 
+    "language": "spa"
+  }
+},
+{
+  "pk": 1, 
+  "model": "lex.enumeration", 
+  "fields": {
+    "name": "number", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lex.enumeration", 
+  "fields": {
+    "name": "number", 
+    "language": "spa"
+  }
+},
+{
+  "pk": 3, 
+  "model": "lex.enumeration", 
+  "fields": {
+    "name": "gender", 
+    "language": "spa"
+  }
+},
+{
+  "pk": 1, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 1, 
+    "value": "sg"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 1, 
+    "value": "pl"
+  }
+},
+{
+  "pk": 3, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 2, 
+    "value": "sg"
+  }
+},
+{
+  "pk": 4, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 2, 
+    "value": "pl"
+  }
+},
+{
+  "pk": 5, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 3, 
+    "value": "masc"
+  }
+},
+{
+  "pk": 6, 
+  "model": "lex.enumvalue", 
+  "fields": {
+    "enum": 3, 
+    "value": "fem"
+  }
+},
+{
+  "pk": 1, 
+  "model": "lex.lexemeterm", 
+  "fields": {
+    "usage": "", 
+    "termNote": "", 
+    "concept": 1, 
+    "name": "steering_wheel", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 2, 
+  "model": "lex.lexemeterm", 
+  "fields": {
+    "usage": "", 
+    "termNote": "", 
+    "concept": 2, 
+    "name": "tire", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 3, 
+  "model": "lex.lexemeterm", 
+  "fields": {
+    "usage": "", 
+    "termNote": "", 
+    "concept": 3, 
+    "name": "wheel", 
+    "language": "eng"
+  }
+},
+{
+  "pk": 1, 
+  "model": "term.subjectfield", 
+  "fields": {
+    "name": "general"
+  }
+},
+{
+  "pk": 2, 
+  "model": "term.subjectfield", 
+  "fields": {
+    "name": "automotive"
+  }
+},
+{
+  "pk": 1, 
+  "model": "term.concept", 
+  "fields": {
+    "subjectField": [
+      2
+    ], 
+    "name": "steering_wheel"
+  }
+},
+{
+  "pk": 2, 
+  "model": "term.concept", 
+  "fields": {
+    "subjectField": [
+      2
+    ], 
+    "name": "tire"
+  }
+},
+{
+  "pk": 3, 
+  "model": "term.concept", 
+  "fields": {
+    "subjectField": [
+      1, 
+      2
+    ], 
+    "name": "wheel"
+  }
+},
+{
+  "pk": 1, 
+  "model": "term.conceptdefinition", 
+  "fields": {
+    "definition": "A car's steering wheel", 
+    "concept": 1, 
+    "language": "eng"
+  }
+},
+{
+  "pk": 2, 
+  "model": "term.conceptdefinition", 
+  "fields": {
+    "definition": "A car's tire", 
+    "concept": 2, 
+    "language": "eng"
+  }
+},
+{
+  "pk": 3, 
+  "model": "term.conceptdefinition", 
+  "fields": {
+    "definition": "A thin cylindrical object", 
+    "concept": 3, 
+    "language": "eng"
+  }
+}
+]

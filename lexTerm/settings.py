@@ -199,6 +199,10 @@ if DEBUG:
     for logger in LOGGING['loggers']:
         LOGGING['loggers'][logger]['handlers'] = ['console']
 
+FIXTURE_DIRS = (
+    ROOT('fixtures'),
+)
+
 # Load separate settings file for development and production-specific settings
 # Do not add local_settings.py to version control
 try:
