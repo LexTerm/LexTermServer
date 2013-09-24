@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # url(r'^lexTerm/', include('lexTerm.foo.urls')),
     url(r'^api/lex/', include('lex.urls')),
     url(r'^api/term/', include('term.urls')),
-
+    url(r'^api/tbx/', include('tbx.urls')),
     url(r'^admin/', include(admin.site.urls)),
 	
     # Uncomment the admin/doc line below to enable admin documentation:
