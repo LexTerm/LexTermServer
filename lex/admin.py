@@ -23,11 +23,11 @@ class EnumValueAdmin(admin.ModelAdmin):
 admin.site.register(EnumValue, EnumValueAdmin)
 
 admin.site.register(Feature)
-admin.site.register(PreferredLemma)
+# admin.site.register(PreferredLemma)
 admin.site.register(FormValue)
-admin.site.register(LexemeTerm)
+admin.site.register(Lexeme)
 admin.site.register(Representation)
-admin.site.register(PartOfSpeech)
+# admin.site.register(PartOfSpeech)
 admin.site.register(FeatureSet)
-admin.site.register(WordSense)
+# admin.site.register(WordSense)
 

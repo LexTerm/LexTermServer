@@ -1,5 +1,5 @@
 from django.forms import widgets
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, RelatedField
 from term.models import *
 
 # Serializers for termbase API
@@ -10,9 +10,10 @@ class SubjectSerializer(ModelSerializer):
         fields = ('name',)
 
 class ConceptSerializer(ModelSerializer):
+    subjectFields = RelatedField(many=True)
     class Meta:
         model = Concept
-        fields = ('name', 'subjectField')
+        fields = ('id', 'subjectFields', 'definition')
 
 # class LexemeSerializer(serializers.ModelSerializer):
 # 

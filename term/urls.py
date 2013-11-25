@@ -1,12 +1,14 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
 from term.views import *
 
 list_actions = {'get': 'list', 'post': 'create'}
 detail_actions = {'get': 'retrieve', 'put': 'create', 'delete': 'destroy'}
 
 urlpatterns = patterns('',
-    url(r'^subjects/$', SubjectView.as_view(list_actions)),
-    url(r'^concepts/$', ConceptView.as_view(list_actions)),
+    url(r'^$', term_root),
+    url(r'^tbx/', include('tbx.urls')),
+    url(r'^subjects/$', SubjectView.as_view(list_actions), name='subject_view'),
+    url(r'^concepts/$', ConceptView.as_view(list_actions), name='concept_view'),
     url(r'^concepts/(?P<id>\d+)/$', ConceptView.as_view(detail_actions)),
     url(r'^subjects/(?P<subject>\w+)/concepts/$', ConceptView.as_view(list_actions)),
     url(r'^subjects/(?P<subject>\w+)/concepts/(?P<id>\d+)/$', ConceptView.as_view(detail_actions)),

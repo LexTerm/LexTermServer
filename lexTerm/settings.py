@@ -72,6 +72,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    ROOT('lexTerm/static/'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -112,6 +113,7 @@ ROOT_URLCONF = 'lexTerm.urls'
 WSGI_APPLICATION = 'lexTerm.wsgi.application'
 
 TEMPLATE_DIRS = (
+    ROOT('lexTerm/templates/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -130,6 +132,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'lex',
     'term',
+    'tbx',
     'tunneling',
     'xsaccess'
 )
@@ -164,6 +167,7 @@ INSTALLED_APPS = (
 # }
 LOGGING = {
     'version': 1,
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
@@ -174,30 +178,36 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
-            },
+        },
         'file': {
-            'level': 'INFO',
+            'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': ROOT('lexTerm.log'),
             'formatter': 'simple'
-            },
         },
+    },
     'loggers': {
         'django': {
-            'handlers': ['file'],
+            'handlers': ['console'],
             'level': 'INFO',
             'propagate': True,
-            },
+        },
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
         }
     }
+}
 
-if DEBUG:
-    # make all loggers use the console.
-    for logger in LOGGING['loggers']:
-        LOGGING['loggers'][logger]['handlers'] = ['console']
+# if DEBUG:
+#     # make all loggers use the console.
+#     for logger in LOGGING['loggers']:
+#         LOGGING['loggers'][logger]['handlers'] = ['console']
+#         # LOGGING['loggers'][logger]['level'] = 'DEBUG'
 
 FIXTURE_DIRS = (
     ROOT('fixtures'),
