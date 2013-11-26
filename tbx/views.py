@@ -7,9 +7,13 @@ from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.serializers import Serializer
 
-import re
-from lxml import etree
+try:
+    from lxml import etree
+    from lxml.etree import fromstring
+except ImportError:
+    import xml.etree.cElementTree as etree
 
 import logging
 logger = logging.getLogger(__name__)
@@ -26,6 +30,33 @@ def tbx_root(request, format=None):
 class FileSerializer(serializers.Serializer):
     file = serializers.FileField(allow_empty_file=False)
 
+
+class ValidateView(GenericAPIView):
+    """ Upload and XML document for TBX-Basic validation.
+    
+        file: the tbx file for validation
+     """
+    
+    serializer_class = FileSerializer
+    
+    def post(self, request):
+        
+        if request.FILES.get('file'):
+            if not request.FILES['file'].multiple_chunks():
+                try:
+                    xml = fromstring(request.FILES['file'].read())
+                except etree.XMLSyntaxError:
+                    return Response(False)
+                else:
+                    tbx_dir = path.join(path.dirname(__file__), "resources/TBXBasic/")
+                    schema = etree.parse(tbx_dir + "TBXBasicRNGV02.rng")
+                    schema = etree.RelaxNG(schema)
+                    
+                    return Response(schema.validate(xml))
+
+            else:
+                raise ErrorResponse(status.HTTP_400_BAD_REQUEST, "Uploaded TBX file is too big to process via this interface. ")
+    
 
 class TBXImportView(GenericAPIView):
     """ Upload a TBX file to import """
@@ -172,4 +203,3 @@ def get_or_none(model, **kwargs):
 def clean_multiline_text(text):
     text = text.translate(None,'\r\n')
     return re.sub(r'\t+', ' ', text)
-
