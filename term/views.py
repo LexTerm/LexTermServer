@@ -15,6 +15,7 @@ def term_root(request, format=None):
             'concepts': reverse('concept_view', request=request, format=format),
             'subjects': reverse('subject_view', request=request, format=format),
             'tbx': reverse(tbx_root, request=request, format=format),
+            'self': reverse(term_root, request=request, format=format)
         }
     })
 

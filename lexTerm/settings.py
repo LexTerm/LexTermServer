@@ -135,7 +135,6 @@ INSTALLED_APPS = (
     'tbx',
     'tunneling',
     'xsaccess',
-    'tbx'
 )
 
 # A sample logging configuration. The only tangible logging

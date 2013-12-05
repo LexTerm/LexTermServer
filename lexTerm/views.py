@@ -10,7 +10,8 @@ def api_root(request, format=None):
     return Response({
         '_links': {
             'lex': reverse(lex_root, request=request, format=format),
-            'term': reverse(term_root, request=request, format=format)
+            'term': reverse(term_root, request=request, format=format),
+            'self': reverse(api_root, request=request, format=format) 
         }
     })
 

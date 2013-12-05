@@ -25,7 +25,8 @@ def tbx_root(request, format=None):
         '_links': {
             'import': reverse('tbx_import', request=request, format=format),
             'export': reverse('tbx_export', request=request, format=format),
-            'validate': reverse('tbx_validate', request=request, format=format)
+            'validate': reverse('tbx_validate', request=request, format=format),
+            'self': reverse('tbx', request=request, format=format)
         }
     })
 

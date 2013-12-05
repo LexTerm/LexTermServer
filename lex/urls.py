@@ -7,7 +7,7 @@ detail_actions = {'get': 'retrieve', 'put': 'create', 'delete': 'destroy'}
 
 urlpatterns = patterns('',
     # url(r'^(?P<langCode>[a-z]{3})/$', '')
-    url(r'^$', lex_root),
+    url(r'^$', lex_root, name="lex"),
     url(r'^lang/$', 
         LanguageView.as_view(list_actions), 
         name='language_list'),

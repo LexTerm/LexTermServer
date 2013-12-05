@@ -5,7 +5,7 @@ list_actions = {'get': 'list', 'post': 'create'}
 detail_actions = {'get': 'retrieve', 'put': 'create', 'delete': 'destroy'}
 
 urlpatterns = patterns('',
-    url(r'^$', term_root),
+    url(r'^$', term_root, name="term"),
     url(r'^tbx/', include('tbx.urls')),
     url(r'^subjects/$', SubjectView.as_view(list_actions), name='subject_view'),
     url(r'^concepts/$', ConceptView.as_view(list_actions), name='concept_view'),

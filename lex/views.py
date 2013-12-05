@@ -18,6 +18,7 @@ def lex_root(request, format=None):
     return Response({
         '_links': {
             'languages': reverse('language_list', request=request, format=format),
+            'self': reverse(lex_root, request=request, format=format)
         }
     })
 
