@@ -12,17 +12,40 @@ Development
   * `pip install virtualenv`
 
 ### Setup ###
+
+Set up a python virtual environment however you want. Here's a simple way to do that:
+
     mkdir lexTerm && cd lexTerm
     virtualenv --no-site-packages server 
     cd server
     source bin/activate
+
+Clone the source repository from GitHub:
+
     git clone git@github.com:LexTerm/LexTermServer.git lexTerm
     cd lexTerm
+
+Install all python dependencies in the virtual environment
+
     pip install -r requirements.txt
+
+Initialize the sqlite database
+
     ./manage.py syncdb
 
 ### Run it ###
+
     ./manage.py runserver
+
+API Documentation
+-----------------
+
+API documentation can be found at http://docs.lexterm.apiary.io/
+
+Apiary provides a mock server which can be used for development. Here's an example of using it with
+cURL:
+
+    curl --include "http://lexterm.apiary.io/api"
 
 Production
 ----------
@@ -40,3 +63,4 @@ Production
 ### Deploy ###
 * to update, simply `git pull` in the repository
 * make sure to run `./manage.py syncdb` if any changes were made to database schemas
+
