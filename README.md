@@ -46,6 +46,8 @@ Apiary provides a mock server which can be used for development. Here's an examp
 cURL:
 
     curl --include "http://lexterm.apiary.io/api"
+    
+The API documentation is written in markdown and stored in this repository [here](./apiary.apib)
 
 Production
 ----------
