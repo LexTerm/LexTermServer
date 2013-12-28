@@ -1,0 +1,878 @@
+FORMAT: X-1A
+
+# LexTerm API
+
+This is the API for the LexTerm Management System. <strong>It is still a work in progress.</strong>
+
+As this is a JSON API, all requests should have these headers:
+
+    Accept: application/json
+    Content-Type: application/json
+
+And all responses will have these headers:
+
+    Content-Type: application/json
+
+# Group API Root
+
+## API Root [/api]
+
+Returns urls for the lex and term API roots.
+
+### Get second-level API roots [GET]
+
++ Response 200 (application/json)
+
+        {
+            "_links": {
+                "lex": "lexterm.apiary.io/api/lex",
+                "term": "lexterm.apiary.io/api/term"
+            }
+        }
+
+# Group Lex Root
+
+## Lex Root [/api/lex]
+
+Returns the links related to the lex API
+
+### Get lex links [GET]
+
++ Response 200 (application/json)
+
+        {
+            "_links": {
+                "languages": "lexterm.apiary.io/api/lex/lang"
+            }
+        }
+
+# Group Language
+
+Group of all resources related to Languages
+
+## All Languages [/api/lex/lang]
+
+Lists all the languages in the system. By convention, LexTerm uses ISO-639-3 for `langCode`, but
+this can be any identifier the client wishes to use.
+
+### List all Languages [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "English",
+                "langCode": "eng",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng",
+                    "classes": "lexterm.apiary.io/api/lex/lang/eng/classes",
+                    "enums": "lexterm.apiary.io/api/lex/lang/eng/enums",
+                    "lexemes": "lexterm.apiary.io/api/lex/lang/eng/lexemes",
+                    "reps": "lexterm.apiary.io/api/lex/lang/eng/reps"
+                }
+            },
+            {
+                "name": "Russian",
+                "langCode": "rus",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/rus",
+                    "classes": "lexterm.apiary.io/api/lex/lang/rus/classes",
+                    "enums": "lexterm.apiary.io/api/lex/lang/rus/enums",
+                    "lexemes": "lexterm.apiary.io/api/lex/lang/rus/lexemes",
+                    "reps": "lexterm.apiary.io/api/lex/lang/rus/reps"
+                }
+            }
+        ]
+
+### Create a new Language [POST]
+
++ Request (application/json)
+
+        {
+            "name": "Spanish",
+            "langCode": "spa"
+        }
+
++ Response 204
+
+## Single Language [/api/lex/lang/{lang}]
+
+Interacts with a single language in the system
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+
+### Retrieve a language [GET]
+
++ Response 200 (application/json)
+
+        {
+            "name": "English",
+            "langCode": "eng",
+            "_links": {
+                "self": "lexterm.apiary.io/api/lex/lang/eng",
+                "classes": "lexterm.apiary.io/api/lex/lang/eng/classes",
+                "enums": "lexterm.apiary.io/api/lex/lang/eng/enums",
+                "lexemes": "lexterm.apiary.io/api/lex/lang/eng/lexemes",
+                "reps": "lexterm.apiary.io/api/lex/lang/eng/reps"
+            }
+        }
+
+### Delete a Language [DELETE]
+
++ Response 204
+
+# Group Lexical Entries
+
+Group of all resources related to Lexical Entries.
+
+## All Lexical Entries [/api/lex/lang/{lang}/lexemes{?lemma}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + lemma (optional, string, `can`) ... Only return lexical entries that match the given lemma.
+
+### List all Lexical Entries [GET]
+
+Return all lexical entries for the specified language. The `lexId`s from this response can be used
+to retrieve individual lexical entries. The `lemma` query parameter is used to filter results by
+lemma. For example, if you want to find the lexical entry for <em>can (noun)</em> you will request
+all lexical entries with the lemma <em>can</em>. From the results (which will include <em>can (V
+aux)</em>, <em>can (V)</em>, and <em>can (N)</em>) you will be able to locate the lexical entry you
+are searching for.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "lexId": "1",
+                "pos": "noun",
+                "lemmaForm": "singular",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1",
+                    "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                    "class": "lexterm.apiary.io/api/lex/lang/eng/classes/noun",
+                    "forms": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1/forms",
+                    "senses": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1/senses"
+                }
+            },
+            {
+                "lexId": "2",
+                "pos": "verb",
+                "lemmaForm": "singular",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/lexemes/2",
+                    "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                    "class": "lexterm.apiary.io/api/lex/lang/eng/classes/verb",
+                    "forms": "lexterm.apiary.io/api/lex/lang/eng/lexemes/2/forms",
+                    "senses": "lexterm.apiary.io/api/lex/lang/eng/lexemes/2/senses"
+                }
+            }
+        ]
+
+## Lexical Entries [/api/lex/lang/{lang}/lexemes]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+
++ Model (application/json)
+
+        {
+            "lexId": "1",
+            "pos": "noun",
+            "lemmaForm": "singular",
+            "_links": {
+                "self": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1",
+                "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                "class": "lexterm.apiary.io/api/lex/lang/eng/classes/noun",
+                "forms": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1/forms",
+                "senses": "lexterm.apiary.io/api/lex/lang/eng/lexemes/1/senses"
+            }
+        }
+
+### Create a Lexical Entry [POST]
+
+`lexId` should not be specified in this request; the server will assign one.
+
++ Request (application/json)
+
+        {
+            "pos": "noun",
+            "class": "noun",
+            "lemmaForm": "singular"
+        }
+
++ Response 200 (application/json)
+
+    [Lexical Entries][]
+
+## Single Lexical Entry [/api/lex/lang/{lang}/lexemes/{id}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + id (number, `1`) ... A unique id (in the specified language) for the lexeme
+
+### Retrieve a Lexical Entry [GET]
+
++ Response 200 (application/json)
+
+    [Lexical Entries][]
+
+### Update a Lexical Entry [PUT]
+
++ Request (application/json)
+
+        {
+            "pos": "noun",
+            "class": "noun",
+            "lemmaForm": "singular"
+        }
+
++ Response 200 (application/json)
+
+    [Lexical Entries][]
+
+### Delete a Lexical Entry [DELETE]
+
++ Response 204
+
+## Lexical Entry Forms [/api/lex/lang/{lang}/lexemes/{id}/forms]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + id (number, `1`) ... A unique id (in the specified language) for the lexeme
+
++ Model
+
+        {
+            "representation": "cat",
+            "_links": {
+                "self": "/api/lex/lang/eng/lexemes/1/forms/1",
+                "form": "/api/lex/lang/eng/classes/noun/forms/singular"
+            }
+        }
+
+### List all forms for a Lexical Entry [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "representation": "cat",
+                "_links": {
+                    "self": "/api/lex/lang/eng/lexemes/1/forms/1",
+                    "form": "/api/lex/lang/eng/classes/noun/forms/singular"
+                }
+            },
+            {
+                "representation": "cats",
+                "_links": {
+                    "self": "/api/lex/lang/eng/lexemes/1/forms/2",
+                    "form": "/api/lex/lang/eng/classes/noun/forms/plural"
+                }
+            }
+        ]
+
+### Create a new Form for a Lexical Entry [POST]
+
++ Request (application/json)
+
+        {
+            "form": "singular",
+            "representation": "cat"
+        }
+
++ Response 200 (application/json)
+
+    [Lexical Entry Forms][]
+
+## Single Lexical Entry Form [/api/lex/lang/{lang}/lexemes/{id}/forms/{formId}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + id (number, `1`) ... A unique id (in the specified language) for the lexeme
+    + formId (string, `1`) ... A unique id (in the specified language and lexeme) for the form
+
+### Retrieve a Form [GET]
+
++ Response 200 (application/json)
+
+    [Lexical Entry Forms][]
+
+### Delete a Form [DELETE]
+
++ Response 204
+
+## Lexical Entry Senses [/api/lex/lang/{lang}/lexemes/{id}/senses]
+
+TODO
+
+### List all senses for a Lexical Entry [GET]
+
++ Response 204
+
+# Group Lexical Class
+
+Group of all resources related to Lexical Classes.
+
+`lemmas` is a list of the <em>forms</em> that are used to represent a lexical item. The list should
+be sorted by preference, i.e., the most preferred lemma should appear first in the list. For
+example, the lemma for a noun should be the singular form, so that appears first. If the singular
+form doesn't exist for the given lexical item, the next lemma in the list would be used (in this
+case plural).
+
+<strong>The Lexical Class representation will be expanded in the future.</strong>
+
+## All Lexical Classes [/api/lex/lang/{lang}/classes]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+
++ Model
+
+        {
+            "name": "noun",
+            "lemmas": ["singular", "plural"],
+            "_links": {
+                "self": "lexterm.apiary.io/api/lex/lang/eng/classes/noun",
+                "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                "forms": "lexterm.apiary.io/api/lex/lang/eng/classes/noun/forms"
+            }
+        }
+
+### List all Lexical Classes [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "noun",
+                "lemmas": ["singular", "plural"],
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/classes/noun",
+                    "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                    "forms": "lexterm.apiary.io/api/lex/lang/eng/classes/noun/forms"
+                }
+            },
+            {
+                "name": "verb",
+                "lemmas": ["infinitive", "3sg"],
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/classes/verb",
+                    "lang": "lexterm.apiary.io/api/lex/lang/eng",
+                    "forms": "lexterm.apiary.io/api/lex/lang/eng/classes/verb/forms"
+                }
+            }
+        ]
+
+### Create a Lexical Class [POST]
+
++ Request (application/json)
+
+        {
+            "name": "noun",
+            "lemmas": ["singular", "plural"]
+        }
+
++ Response 200 (application/json)
+
+    [All Lexical Classes][]
+
+## Single Lexical Class [/api/lex/lang/{lang}/classes/{className}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + className (string, `noun`) ... A unique name (in the specified language) for the lexical class
+
+### Retrieve a Lexical Class [GET]
+
++ Response 200 (application/json)
+
+    [All Lexical Classes][]
+
+### Update a Lexical Class [PUT]
+
++ Request (application/json)
+
+        {
+            "name": "noun",
+            "lemmas": ["singular", "plural"]
+        }
+
++ Response 200 (application/json)
+
+    [All Lexical Classes][]
+
+### Delete a Lexical Class [DELETE]
+
++ Response 204
+
+## Lexical Class Forms [/api/lex/lang/{lang}/classes/{className}/forms]
+
+Forms will be expanded in the future to be defined by a set of features.
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + className (string, `noun`) ... A unique name (in the specified language) for the lexical class
+
+### List all Forms for a Lexical Class [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "singular",
+                "_links": {
+                    "self": "/api/lex/lang/eng/classes/noun/forms/singular"
+                }
+            },
+            {
+                "name": "plural",
+                "_links": {
+                    "self": "/api/lex/lang/eng/classes/noun/forms/plural"
+                }
+            }
+        ]
+
+### Create a new Form for a Lexical Class [POST]
+
++ Request (application/json)
+
+        {
+            "name": "singular"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "name": "singular",
+            "_links": {
+                "self": "/api/lex/lang/eng/classes/noun/forms/singular"
+            }
+        }
+
+## Single Form [/api/lex/lang/{lang}/classes/{className}/forms/{formName}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + className (string, `noun`) ... A unique name (in the specified language) for the lexical class
+    + formName (string, `singular`) ... A unique name (in the specified language and lexical class) for the form
+
+### Retrieve a Form [GET]
+
++ Response 200 (application/json)
+
+        {
+            "name": "singular",
+            "_links": {
+                "self": "/api/lex/lang/eng/classes/noun/forms/singular"
+            }
+        }
+
+### Delete a Form [DELETE]
+
++ Response 204
+
+## Lexical Class Features [/api/lex/lang/{lang}/classes/{className}/features]
+
+TODO
+
+### List all Features for a Lexical Class [GET]
+
+TODO
+
++ Response 204
+
+# Group Enumerations
+
+Group of all resources related to Enumerations.
+
+Enumerations represent the possible values of features, which define forms. Concretely, the
+`singular` form is defined by one feature, `number` (but forms can be defined by many features). The
+`number` feature refers to a enumeration (which also happens to be called `number`) for its possible
+values. The `number` enumeration contains the possible values: `singular` and `plural`.
+
+<strong>Note</strong> that the enumeration values `singular` and `plural` are not the same as the forms called
+`singular` and `plural`. We just happen to give the forms those names because they are primarily
+defined by the enumeration `number`, which has those two values.
+
+## All Enumerations [/api/lex/lang/{lang}/enums]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+
++ Model
+
+        {
+            "name": "number",
+            "_links": {
+                "self": "lexterm.apiary.io/api/lex/lang/eng/enums/number",
+                "values": "lexterm.apiary.io/api/lex/lang/eng/enums/number/values"
+            }
+        }
+
+### List all Enums [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "number",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/enums/number",
+                    "values": "lexterm.apiary.io/api/lex/lang/eng/enums/number/values"
+                }
+            },
+            {
+                "name": "tense",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/enums/tense",
+                    "values": "lexterm.apiary.io/api/lex/lang/eng/enums/tense/values"
+                }
+            }
+        ]
+
+### Create an Enum [POST]
+
++ Request (application/json)
+
+        {
+            "name": "number"
+        }
+
++ Response 200 (application/json)
+
+    [All Enumerations][]
+
+## Single Enumeration [/api/lex/lang/{lang}/enums/{enumName}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + enumName (string, `number`) ... A unique name (in the specified language) for the enumeration 
+
+### Retrieve an Enumeration [GET]
+
++ Response 200 (application/json)
+
+    [All Enumerations][]
+
+### Update an Enumeration [PUT]
+
++ Request (application/json)
+
+        {
+            "name": "number"
+        }
+
++ Response 200 (application/json)
+
+    [All Enumerations][]
+
+### Delete an Enumeration [DELETE]
+
++ Response 204
+
+## Enumeration Values [/api/lex/lang/{lang}/enums/{enumName}/values]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + enumName (string, `number`) ... A unique name (in the specified language) for the enumeration 
+
++ Model
+
+        [
+            {"value": "singular"},
+            {"value": "plural"}
+        ]
+
+### List Enumeration Values [GET]
+
++ Response 200 (application/json)
+
+    [Enumeration Values][]
+
+### Add Enumeration Value [POST]
+
++ Request (application/json)
+
+        {
+            "value": "plural"
+        }
+
++ Response 200 (application/json)
+
+    [Enumeration Values][]
+
+## Single Enumeration Value [/api/lex/lang/{lang}/enums/{enumName}/values/{valueName}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + enumName (string, `number`) ... A unique name (in the specified language) for the enumeration 
+    + valueName (string, `plural`) ... A unique name (in the specified enum) for the value
+
+### Delete Enumeration Value [DELETE]
+
++ Response 204
+
+# Group Representations
+
+Group of all resources related to Representations.
+
+## All Representations [/api/lex/lang/{lang}/reps]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+
+### List all Representations [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name": "written",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/reps/written"
+                }
+            },
+            {
+                "name": "IPA",
+                "_links": {
+                    "self": "lexterm.apiary.io/api/lex/lang/eng/reps/ipa"
+                }
+            }
+        ]
+
+### Create a New Representation [POST]
+
++ Request (application/json)
+
+        {
+            "name": "written"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "name": "written",
+            "_links": {
+                "self": "lexterm.apiary.io/api/lex/lang/eng/reps/written"
+            }
+        }
+
+## Single Representation [/api/lex/lang/{lang}/reps/{repName}]
+
++ Parameters
+    + lang (string, `eng`) ... A language code
+    + repName (string, `written`) ... A unique name (in the specified language) for the representation
+
+### Delete a Representation [DELETE]
+
++ Response 204
+
+# Group Term Root
+
+## Lex Root [/api/term]
+
+Returns the links related to the term API
+
+### Get term links [GET]
+
++ Response 200 (application/json)
+
+        {
+            "_links": {
+                "subjects": "/api/term/subjects",
+                "concepts": "/api/term/concepts"
+            }
+        }
+
+# Group Subjects
+
+Group of all resources related to Subject Fields.
+
+## All Subjects [/api/term/subjects]
+
++ Model
+
+        [
+            {
+                "name": "general",
+                "_links": {
+                    "self": ""/api/term/subjects/general"
+                }
+            },
+            {
+                "name": "automotive",
+                "_links": {
+                    "self": ""/api/term/subjects/automotive"
+                }
+            },
+            {
+                "name": "biology",
+                "_links": {
+                    "self": ""/api/term/subjects/biology"
+                }
+            },
+        ]
+
+### List all Subjects [GET]
+
++ Response 200 (application/json)
+
+    [All Subjects][]
+
+### Create a New Subject [POST]
+
++ Request (application/json)
+
+        {
+            "name": "biology"
+        }
+
++ Response 200 (application/json)
+
+        {
+            "name": "biology",
+            "_links": {
+                "self": "/api/term/subjects/biology"
+            }
+        }
+
+## Single Subject [/api/term/subjects/{subjectName}]
+
++ Parameters
+    + subjectName (string, `automotive`) ... A unique name for the subject field
+
+### Delete a Subject [DELETE]
+
++ Response 204
+
+# Group Concepts
+
+Group of all resources related to Concepts.
+
+## All Concepts [/api/term/concepts]
+
++ Model
+
+        {
+            "conceptId": "1",
+            "subjectFields": ["general", "automotive"],
+            "_links": {
+                "self": "/api/term/concepts/1",
+                "terms": "/api/term/concepts/1/terms"
+            }
+        }
+
+### List all Concepts [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "conceptId": "1",
+                "subjectFields": ["general"],
+                "_links": {
+                    "self": "/api/term/concepts/1",
+                    "terms": "/api/term/concepts/1/terms"
+                }
+            },
+            {
+                "conceptId": "213",
+                "subjectFields": ["general"],
+                "_links": {
+                    "self": "/api/term/concepts/213",
+                    "terms": "/api/term/concepts/213/terms"
+                }
+            },
+            {
+                "conceptId": "652",
+                "subjectFields": ["general"],
+                "_links": {
+                    "self": "/api/term/concepts/652",
+                    "terms": "/api/term/concepts/652/terms"
+                }
+            }
+        ]
+
+### Create a New Concept [POST]
+
+`conceptId` should not be specified in this request; the server will assign one.
+
+We might break out subject fields into its own endpoint, i.e., "/api/term/concepts/1/subjects".
+
++ Request (application/json)
+
+        {
+            "subjectFields": ["general", "automotive"]
+        }
+
++ Response 200 (application/json)
+
+    [All Concepts][]
+
+## Single Concept [/api/term/concepts/{conceptId}]
+
++ Parameters
+    + conceptId (string, `1`) ... A unique id for the concept
+
+### Retrieve a Concept [GET]
+
++ Response 200 (application/json)
+
+    [All Concepts][]
+
+### Update a Concept [PUT]
+
++ Request (application/json)
+
+        {
+            "subjectFields": ["general", "automotive"]
+        }
+
++ Response 200 (application/json)
+
+    [All Concepts][]
+
+### Delete a Concept [DELETE]
+
++ Response 204
+
+## Concept Terms [/api/term/concepts/{conceptId}/terms]
+
+TODO
+
+### List all Terms for a Concept [GET]
+
+TODO
+
++ Response 204
+
+## All Concepts by Subject [/api/term/subjects/{subjectName}/concepts]
+
++ Parameters
+    + subjectName (string, `automotive`) ... A unique name for the subject field
+
+### List all Concepts [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "conceptId": "1",
+                "subjectFields": ["general"],
+                "_links": {
+                    "self": "/api/term/concepts/1",
+                    "terms": "/api/term/concepts/1/terms"
+                }
+            },
+            {
+                "conceptId": "652",
+                "subjectFields": ["general"],
+                "_links": {
+                    "self": "/api/term/concepts/652",
+                    "terms": "/api/term/concepts/652/terms"
+                }
+            }
+        ]
+
