@@ -14,7 +14,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', 
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': ROOT('lexTerm/data.db'),
         # The following settings are not used with sqlite3:
         'USER': '',
@@ -215,8 +215,14 @@ FIXTURE_DIRS = (
 
 # Load separate settings file for development and production-specific settings
 # Do not add local_settings.py to version control
-try:
-    execfile('local_settings.py')
-except IOError:
-    pass
+#try:
+    #execfile('local_settings.py')
+#except IOError:
+    #pass
 
+DEBUG_APPS = None
+try:
+    from local_settings import *
+    INSTALLED_APPS += DEBUG_APPS
+except ImportError:
+    pass

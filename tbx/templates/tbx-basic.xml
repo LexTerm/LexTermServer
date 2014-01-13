@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd">
+<!-- Created by the LexTerm terminology and dictionary management system. -->
+<martif type="TBX-Basic" xml:lang="en-US">
+	<martifHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>LexTerm TBX-Basic File</title>
+			</titleStmt>
+			<sourceDesc>
+				<p>LexTerm system tbx export.</p>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<p type="XCSURI">http://www.lisa.org/fileadmin/standards/tbx_basic/TBXBasicXCSV02.xcs</p>
+		</encodingDesc>
+	</martifHeader>
+	<text>
+		<body>
+                    {% for c_id, lang_sets in concepts.items %}
+                        <termEntry id="{{c_id}}">
+                            {% for lang_id, terms in lang_sets.items %}
+                                <langSet xml:lang="{{lang_id}}">
+                                    {% for term in terms %}
+					<tig>
+                                            <term>{{term.representation}}</term>
+					</tig>
+                                    {% endfor %}
+				</langSet>
+                            {% endfor %}
+                        </termEntry>
+                    {% endfor %}
+		</body>
+	</text>
+</martif>

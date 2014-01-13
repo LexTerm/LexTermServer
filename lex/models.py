@@ -1,7 +1,7 @@
 from django.db import models
-from django.db.models import F
 from rest_framework.reverse import reverse
 from term.fields import UUIDField
+
 
 class Language(models.Model):
     langCode = models.CharField(primary_key=True, max_length=100)
@@ -9,11 +9,13 @@ class Language(models.Model):
 
     def __unicode__(self):
         return self.name
+
     def get_absolute_url(self, request):
         return reverse('language_detail', request=request, kwargs={'langCode': self.langCode})
 
     class Meta:
         ordering = ('langCode',)
+
 
 class LexicalClass(models.Model):
     name = models.CharField(max_length=100)
@@ -24,6 +26,7 @@ class LexicalClass(models.Model):
 
     class Meta:
         unique_together = ('name', 'language')
+
 
 class Form(models.Model):
     name = models.CharField(max_length=100)
@@ -39,14 +42,6 @@ class Form(models.Model):
         ordering = ('preference',)
         unique_together = ('name', 'lexicalClass')
 
-# not necessary - just put preference on the Form model
-# class PreferredLemma(models.Model):
-#     lexicalClass = models.ForeignKey(LexicalClass, related_name='preferred_lemmas')
-#     form = models.ForeignKey(Form)
-#     preference = models.IntegerField()
-# 
-#     def __unicode__(self):
-#         return "preferred_lemma:%s:#%d:%s" % (self.lexicalClass, self.preference, self.form)
 
 class Enumeration(models.Model):
     name = models.CharField(max_length=100)
@@ -57,6 +52,7 @@ class Enumeration(models.Model):
 
     class Meta:
         unique_together = ('name', 'language')
+
 
 class EnumValue(models.Model):
     value = models.CharField(max_length=100)
@@ -72,6 +68,7 @@ class EnumValue(models.Model):
     class Meta:
         unique_together = ('value', 'enum')
 
+
 class Feature(models.Model):
     name = models.CharField(max_length=100)
     lexicalClass = models.ForeignKey(LexicalClass, related_name='features')
@@ -79,6 +76,7 @@ class Feature(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class FormValue(models.Model):
     form = models.ForeignKey(Form, related_name='values')
@@ -89,27 +87,31 @@ class FormValue(models.Model):
         return "%s:%s:%s" % (self.form, self.feature, self.value)
 
 # Merging Term and Lexeme
+
+
 class Lexeme(models.Model):
     id = UUIDField(primary_key=True, auto=True, short=True)
     language = models.ForeignKey(Language)
     lexicalClass = models.ForeignKey(LexicalClass)
-    concept = models.ForeignKey('term.Concept', blank=True, null=True, related_name='terms')
+    concept = models.ForeignKey(
+        'term.Concept', blank=True, null=True, related_name='terms')
     lemma = models.CharField(max_length=200, blank=True, null=True)
-    # term = models.ForeignKey('term.Term', related_name='relatedLexeme')
-    # usage = models.TextField(blank=True)
 
     def __unicode__(self):
         if self.lemma:
             return "{}({})".format(self.id, self.lemma)
         return "{}".format(self.id)
+
     def get_absolute_url(self, request):
-        return reverse('lexeme_detail', request=request, 
-                kwargs={'langCode': self.language.langCode, 'id': self.id})
+        return reverse('lexeme_detail', request=request,
+                       kwargs={'langCode': self.language.langCode, 'id': self.id})
+
 
 class TermNote(models.Model):
     lexeme = models.ForeignKey(Lexeme, related_name='term_notes')
     type = models.CharField(max_length=100)
     note = models.TextField()
+
 
 class LexicalForm(models.Model):
     lexeme = models.ForeignKey(Lexeme, related_name='forms')
@@ -117,11 +119,12 @@ class LexicalForm(models.Model):
     representation = models.CharField(max_length=200)
 
     def __unicode__(self):
-        return representation
+        return self.representation
+
     def get_absolute_url(self, request):
-        return reverse('lexical_form_detail', request=request, 
-                kwargs={'langCode': self.lexeme.language.langCode, 
-                    'id': self.lexeme.id, 'form': self.form.name})
+        return reverse('lexical_form_detail', request=request,
+                       kwargs={'langCode': self.lexeme.language.langCode,
+                               'id': self.lexeme.id, 'form': self.form.name})
 
     class Meta:
         unique_together = ('lexeme', 'form')
@@ -139,6 +142,7 @@ class LexicalForm(models.Model):
                     self.lexeme.save()
                     return
 
+
 class RepresentationType(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language)
@@ -149,6 +153,7 @@ class RepresentationType(models.Model):
     class Meta:
         unique_together = ('name', 'language')
 
+
 class Representation(models.Model):
     lexeme = models.ForeignKey(Lexeme)
     representationType = models.ForeignKey(RepresentationType)
@@ -157,12 +162,6 @@ class Representation(models.Model):
     def __unicode__(self):
         return self.name
 
-# class PartOfSpeech(models.Model):
-#     lexeme = models.ForeignKey(Lexeme)
-#     lexicalClass = models.ForeignKey(LexicalClass)
-# 
-#     def __unicode__(self):
-#         return self.lexicalClass
 
 class FeatureSet(models.Model):
     lexeme = models.ForeignKey(Lexeme)
@@ -170,12 +169,3 @@ class FeatureSet(models.Model):
 
     def __unicode__(self):
         return "%s:%s" % (self.lexeme, self.value)
-
-# class WordSense(models.Model):
-#     lexeme = models.ForeignKey(Lexeme)
-#     concept = models.ForeignKey('term.Concept')
-#     etymology = models.TextField()
-#     
-#     def __unicode__(self):
-#         return "%s:%s" % (self.lexeme, self.concept)
-# 
