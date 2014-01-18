@@ -31,4 +31,3 @@ class ConceptView(TermAPIView):
     model = Concept
     serializer_class = ConceptSerializer
     lookup_field = 'id'
-

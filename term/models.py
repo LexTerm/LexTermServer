@@ -1,6 +1,6 @@
 from django.db import models
 from term.fields import UUIDField
-# from lex.models import Language, Lexeme
+from rest_framework.reverse import reverse
 
 # class TermBase(models.Model):
 #     name = models.CharField(max_length=100)
@@ -11,6 +11,12 @@ from term.fields import UUIDField
 
 class SubjectField(models.Model):
     name = models.CharField(max_length=100)
+
+    def get_absolute_url(self, request):
+        return reverse(
+            'subject_detail',
+            request=request,
+            kwargs={'name': self.name})
 
     def __unicode__(self):
         return self.name
