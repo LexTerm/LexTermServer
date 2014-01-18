@@ -120,6 +120,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    # Django built-ins
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -129,7 +130,14 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+
+    # REST libraries
     'rest_framework',
+
+    # Database migration utils
+    'south',
+
+    # Local apps
     'lex',
     'term',
     'tbx',
@@ -137,34 +145,6 @@ INSTALLED_APPS = (
     'xsaccess',
 )
 
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'filters': {
-#         'require_debug_false': {
-#             '()': 'django.utils.log.RequireDebugFalse'
-#         }
-#     },
-#     'handlers': {
-#         'mail_admins': {
-#             'level': 'ERROR',
-#             'filters': ['require_debug_false'],
-#             'class': 'django.utils.log.AdminEmailHandler'
-#         }
-#     },
-#     'loggers': {
-#         'django.request': {
-#             'handlers': ['mail_admins'],
-#             'level': 'ERROR',
-#             'propagate': True,
-#         },
-#     }
-# }
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
@@ -203,26 +183,13 @@ LOGGING = {
     }
 }
 
-# if DEBUG:
-#     # make all loggers use the console.
-#     for logger in LOGGING['loggers']:
-#         LOGGING['loggers'][logger]['handlers'] = ['console']
-#         # LOGGING['loggers'][logger]['level'] = 'DEBUG'
-
 FIXTURE_DIRS = (
     ROOT('fixtures'),
 )
 
-# Load separate settings file for development and production-specific settings
-# Do not add local_settings.py to version control
-#try:
-    #execfile('local_settings.py')
-#except IOError:
-    #pass
-
 DEBUG_APPS = None
 try:
-    from local_settings import *
+    from local_settings import *  # NOQA
     INSTALLED_APPS += DEBUG_APPS
 except ImportError:
     pass
