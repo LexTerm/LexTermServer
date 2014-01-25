@@ -105,7 +105,7 @@ class TBXExportView(APIView):
     def get(self, request, format=None):
         concepts = {}
         for lex_form in LexicalForm.objects.all():
-            concept_id = lex_form.lexeme.concept.id
+            concept_id = lex_form.lexeme.concept.concept_id
             concepts.setdefault(concept_id, {})
             lang_code = lex_form.lexeme.language.langCode
             concepts[concept_id].setdefault(lang_code, [])
@@ -135,10 +135,10 @@ def import_tbx(tbx_file):
 def import_term_entry(term_entry):
     concept_id = term_entry.get('id')
     print("importing termEntry: {}".format(concept_id))
-    concept = get_or_none(Concept, id=concept_id)
+    concept = get_or_none(Concept, concept_id=concept_id)
     if not concept:
         # if the concept doesn't already exist, create one
-        concept = Concept(id=concept_id)
+        concept = Concept(concept_id=concept_id)
         concept.save()
         print("created concept: {}".format(concept_id))
 
