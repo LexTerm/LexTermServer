@@ -3,20 +3,19 @@ from term.models import *
 from rest_framework.status import *
 from rest_framework import serializers
 from rest_framework.generics import GenericAPIView
-from rest_framework.decorators import api_view
 from rest_framework.reverse import reverse
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.decorators import api_view
 from django.template.loader import get_template
 from django.http import HttpResponse
 from django.template.context import Context
-from django.utils.encoding import smart_text
 import re
 from os import path
 
 try:
     from lxml import etree
-    from lxml.etree import fromstring, tostring
+    from lxml.etree import fromstring
 except ImportError:
     import xml.etree.cElementTree as etree
 
@@ -27,12 +26,10 @@ logger = logging.getLogger(__name__)
 @api_view(('GET',))
 def tbx_root(request, format=None):
     return Response({
-        '_links': {
-            'import': reverse('tbx_import', request=request, format=format),
-            'export': reverse('tbx_export', request=request, format=format),
-            'validate': reverse('tbx_validate', request=request, format=format),
-            'self': reverse('tbx', request=request, format=format)
-        }
+        'import': reverse('tbx_import', request=request, format=format),
+        'export': reverse('tbx_export', request=request, format=format),
+        'validate': reverse('tbx_validate', request=request, format=format),
+        'url': reverse('tbx', request=request, format=format),
     })
 
 

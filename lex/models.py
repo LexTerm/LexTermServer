@@ -39,6 +39,14 @@ class LexicalClass(models.Model):
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language, related_name="lexical_classes")
 
+    class Meta:
+        verbose_name_plural = "Lexical Classes"
+        unique_together = ('name', 'language')
+
+    @property
+    def forms(self):
+        return Form.objects.filter(lexeme__lex_class=self)
+
     @property
     def features(self):
         return Feature.objects.filter(values__forms__lexeme__lex_class=self)
@@ -46,16 +54,16 @@ class LexicalClass(models.Model):
     def __unicode__(self):
         return "LexicalClass<{}: {}>".format(self.language.locale, self.name)
 
-    class Meta:
-        unique_together = ('name', 'language')
-
 
 class Lexeme(models.Model):
     lex_id = models.CharField(max_length=100, unique=True, blank=True)
     lex_class = models.ForeignKey(LexicalClass, related_name="lexemes")
     concept = models.ForeignKey(
         'term.Concept', blank=True, null=True, related_name='lexemes')
-    lemma = models.CharField(max_length=200, blank=True, null=True)
+
+    @property
+    def language(self):
+        return self.lex_class.language
 
     def save(self, *args, **kwargs):
         if not self.lex_id:
@@ -65,10 +73,10 @@ class Lexeme(models.Model):
     def __unicode__(self):
         if self.lemma:
             return "Lexeme<{}: {}-{}>".format(
-                self.lex_class.language.locale,
+                self.language.locale,
                 self.id,
                 self.lemma)
-        return "Lexeme<{}: {}>".format(self.lex_class.language.locale, self.id)
+        return "Lexeme<{}: {}>".format(self.language.locale, self.id)
 
 
 class Feature(models.Model):
@@ -79,14 +87,15 @@ class Feature(models.Model):
 
 
 class FeatureValue(models.Model):
-    value = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     feature = models.ForeignKey(Feature, related_name='values')
+
+    class Meta:
+        verbose_name_plural = "Feature Values"
+        unique_together = ('name', 'feature')
 
     def __unicode__(self):
         return "FeatureValue<{}>".format(self.value)
-
-    class Meta:
-        unique_together = ('value', 'feature')
 
 
 class Form(models.Model):
@@ -97,11 +106,23 @@ class Form(models.Model):
     # features are instances (values) of the features that the form uses
     features = models.ManyToManyField(FeatureValue, related_name="forms")
     lexeme = models.ForeignKey(Lexeme, related_name='forms')
-    preference = models.IntegerField()
+    is_lemma = models.BooleanField()
 
     @property
     def lex_class(self):
         return self.lexeme.lex_class
+
+    def save(self, *args, **kwargs):
+        # if necessary toggle lemma status
+        if self.is_lemma:
+            try:
+                lemma = Form.objects.get(is_lemma=True, lexeme=self.lexeme)
+                if self != lemma:
+                    lemma.is_lemma = False
+                    lemma.save()
+            except Form.DoesNotExist:
+                pass
+        super(Form, self).save()
 
     def __unicode__(self):
         return "Form<{}:({}) {}>".format(
@@ -109,12 +130,12 @@ class Form(models.Model):
             self.lex_class.name,
             self.name)
 
-    class Meta:
-        ordering = ('preference',)
-
 
 class RepresentationType(models.Model):
     name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Representation Types"
 
     def __unicode__(self):
         return "RepresentationType<{}>".format(self.name)

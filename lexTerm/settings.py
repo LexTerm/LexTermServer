@@ -1,7 +1,7 @@
 # Django settings for lexTerm project.
 
 from os import path
-ROOT = lambda base : path.join(path.dirname(__file__)+"/../", base)
+ROOT = lambda base: path.join(path.dirname(__file__)+"/../", base)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -118,6 +118,12 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+REST_FRAMEWORK = {
+    # Use hyperlinked styles by default.
+    # Only used if the `serializer_class` attribute is not set on a view.
+    'DEFAULT_MODEL_SERIALIZER_CLASS': 'rest_framework.serializers.HyperlinkedModelSerializer'
+}
 
 INSTALLED_APPS = (
     # Django built-ins

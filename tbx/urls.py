@@ -1,7 +1,10 @@
 from django.conf.urls import patterns, url
-from tbx.views import *
+from tbx.views import tbx_root, TBXExportView, \
+    TBXImportView, ValidateView
 
-urlpatterns = patterns('',
+
+urlpatterns = patterns(
+    '',
     url(r'^$', tbx_root, name="tbx"),
     url(r'^validate/$', ValidateView.as_view(), name='tbx_validate'),
     url(r'^import/$', TBXImportView.as_view(), name='tbx_import'),
