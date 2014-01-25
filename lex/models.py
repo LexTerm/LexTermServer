@@ -132,7 +132,7 @@ class Form(models.Model):
 
 
 class RepresentationType(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
 
     class Meta:
         verbose_name_plural = "Representation Types"
@@ -147,6 +147,9 @@ class Representation(models.Model):
         RepresentationType,
         related_name="representations")
     name = models.CharField(max_length=100)
+
+    class Meta:
+        unique_together = ('form', 'representation_type',)
 
     def __unicode__(self):
         return "Representation<{}: {}>".format(

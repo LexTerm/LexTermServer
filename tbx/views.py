@@ -22,6 +22,9 @@ except ImportError:
 import logging
 logger = logging.getLogger(__name__)
 
+TBX_BASIC_PLACEHOLDER = "tbx_basic_term"
+WRITTEN_REP_TYPE = "written"
+
 
 @api_view(('GET',))
 def tbx_root(request, format=None):
@@ -101,12 +104,19 @@ class TBXExportView(APIView):
     #TODO export definitions
     def get(self, request, format=None):
         concepts = {}
-        for lex_form in LexicalForm.objects.all():
-            concept_id = lex_form.lexeme.concept.concept_id
+        for form in Form.objects.filter(is_lemma=True, representations__representation_type__name=WRITTEN_REP_TYPE):
+            concept_id = form.lexeme.concept.concept_id
             concepts.setdefault(concept_id, {})
-            lang_code = lex_form.lexeme.language.langCode
-            concepts[concept_id].setdefault(lang_code, [])
-            concepts[concept_id][lang_code].append(lex_form)
+            lang_code = form.lexeme.language.lang_code
+            reg_code = form.lexeme.language.region_code
+            if reg_code:
+                concepts[concept_id].setdefault(lang_code+"-"+reg_code, [])
+                concepts[concept_id][lang_code+"-"+reg_code].append(
+                    form.representations.get(representation_type__name=WRITTEN_REP_TYPE))
+            else:
+                concepts[concept_id].setdefault(lang_code, [])
+                concepts[concept_id][lang_code].append(
+                    form.representations.get(representation_type__name=WRITTEN_REP_TYPE))
 
         template = get_template('tbx-basic.xml')
         xml = template.render(Context({'concepts': concepts}))
@@ -171,15 +181,19 @@ def import_subject_fields(term_entry, concept):
 
 
 def import_lang_set(lang_set, concept):
-    lang_code = lang_set.get(XML_NS + 'lang').lower()
+    code = lang_set.get(XML_NS + 'lang').lower()
     # get rid of locale codes for now (en-gb ==> en)
-    lang_code = lang_code.split('-', 1)[0]
-    print("importing langSet: {}".format(lang_code))
-    lang = get_or_none(Language, langCode=lang_code)
+    code = code.split('-', 1)
+    lang_code = code[0]
+    reg_code = ''
+    if len(code) > 1:
+        reg_code = code[1]
+    print("importing langSet: {}_{}".format(lang_code, reg_code))
+    lang = get_or_none(Language, lang_code=lang_code, region_code=reg_code)
     if not lang:
         # if the language doesn't already exist, create it
         # (use langCode for name, user can change it later)
-        lang = Language(langCode=lang_code, name=lang_code)
+        lang = Language(lang_code=lang_code, name=lang_code, region_code=reg_code)
         lang.save()
         print("created language: {}".format(lang_code))
 
@@ -194,8 +208,8 @@ def import_term(tig, lang, concept):
     pos = tig.findtext("./termNote[@type='partOfSpeech']")
     if not pos:
         logger.warning(
-            u"Could not import term '{}': no partOfSpeech data found".format(term))
-        return
+            u"No partOfSpeech data found for {}.".format(term))
+        pos = "*"  # Special character for pos
     pos = pos.lower()
     lex_class = get_or_none(LexicalClass, name=pos, language=lang)
     if not lex_class:
@@ -203,37 +217,33 @@ def import_term(tig, lang, concept):
         lex_class = LexicalClass(name=pos, language=lang)
         lex_class.save()
         print("created lexical class: {}".format(pos))
-    # TBX standard (ISO 30042) says that terms are defined as being in lemma / citation form
-    # So we just grab the form with preference=1, because we don't have enough information
-    # to intelligently fall back to a different form
-    lemma_form = get_or_none(Form, lexicalClass=lex_class, preference=1)
-    if not lemma_form:
-        # we can't know what form to create, just use a placeholder until the user changes it
-        # first check if the placeholder has already been created
-        lemma_form = get_or_none(Form, name='term', lexicalClass=lex_class)
-        if not lemma_form:
-            lemma_form = Form(
-                name='term', lexicalClass=lex_class, preference=1000)
-            lemma_form.save()
-            print(
-                "created temporary form: term for lexical class: {}".format(pos))
-    # make an attempt to check if the lexeme already exists (based on its
-    # lemma)
-    lexeme = get_or_none(Lexeme, language=lang,
-                         lexicalClass=lex_class, lemma=term)
+    lexeme = get_or_none(Lexeme, lex_class=lex_class, concept=concept)
     if not lexeme:
-        lexeme = Lexeme(language=lang, lexicalClass=lex_class, concept=concept)
+        lexeme = Lexeme(language=lang, lex_class=lex_class, concept=concept)
         lexeme.save()
         print(u"created lexeme for term: {}".format(term))
     else:
-        # the term already exists, we're done
-        # set the concept in case it wasn't already
-        print(u"term: {} already exists".format(term))
-        lexeme.concept = concept
-        lexeme.save()
+        # TBX standard (ISO 30042) says that terms are defined as being in lemma / citation form
+        # So if we have the lexeme, the term should already exist in the db
         return
-    lex_term = LexicalForm(lexeme=lexeme, form=lemma_form, representation=term)
-    lex_term.save()
+
+    # we can't know what form to create, just use a placeholder until the user changes it
+    # first check if the placeholder has already been created
+    lemma_form = get_or_none(Form, name=TBX_BASIC_PLACEHOLDER, lexeme=lexeme)
+    if not lemma_form:
+        lemma_form = Form(
+            name=TBX_BASIC_PLACEHOLDER,
+            lexeme=lexeme,
+            is_lemma=True)
+        lemma_form.save()
+        print(
+            "created temporary form: {} for lexical class: {}".format(TBX_BASIC_PLACEHOLDER, pos))
+
+    rep = Representation(
+        name=term,
+        form=lemma_form,
+        representation_type=RepresentationType.objects.get_or_create(name=WRITTEN_REP_TYPE)[0])
+    rep.save()
     print(u"created term: {}".format(term))
 
 

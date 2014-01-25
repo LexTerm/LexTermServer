@@ -23,7 +23,7 @@
                                 <langSet xml:lang="{{lang_id}}">
                                     {% for term in terms %}
 					<tig>
-                                            <term>{{term.representation}}</term>
+                                            <term>{{term.name}}</term>
 					</tig>
                                     {% endfor %}
 				</langSet>
