@@ -256,8 +256,6 @@ def get_or_none(model, **kwargs):
 
 #TODO: Blocks of text in the XML have newlines and tabs for alignment - clean
 # these up
-
-
 def clean_multiline_text(text):
     text = text.translate(None, '\r\n')
     return re.sub(r'\t+', ' ', text)

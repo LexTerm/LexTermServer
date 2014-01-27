@@ -3,6 +3,15 @@ from django.db import models
 
 
 class Language(models.Model):
+    """
+    The Language model represents a given language such as
+    British English en_US. The class currently supports up to
+    ISO 63906 and ISO 3166 for language and region codes.
+
+    The Language class has shortcuts to other related models
+    such as lexemes, features, and representation_types.
+    """
+
     # ISO 639-6 is the current longest possible code
     lang_code = models.CharField(max_length=4)
     # ISO 3166-1 alpha-3 is the current longest code
@@ -36,6 +45,10 @@ class Language(models.Model):
 
 
 class LexicalClass(models.Model):
+    """
+    The LexicalClass model represents any possible lexical class such
+    as traditional parts of speech (e.g. noun, verb, adjective).
+    """
     name = models.CharField(max_length=100)
     language = models.ForeignKey(Language, related_name="lexical_classes")
 
@@ -56,6 +69,16 @@ class LexicalClass(models.Model):
 
 
 class Lexeme(models.Model):
+    """
+    Lexemes are the entries in the lexicon. It should be noted that
+    terms are usually described by a lemma, or the prefferred Form of
+    a particular lexeme.
+
+    Lexemes have a unique id independent of their row indentifier in
+    the database. A Lexeme is described by a particular lexical class
+    (which implies a particular language) and a particular concept.
+    """
+
     lex_id = models.CharField(max_length=100, unique=True, blank=True)
     lex_class = models.ForeignKey(LexicalClass, related_name="lexemes")
     concept = models.ForeignKey(
@@ -80,6 +103,10 @@ class Lexeme(models.Model):
 
 
 class Feature(models.Model):
+    """
+    The Feature model represents possible features of a language,
+    such as Number, Gender, or Case.
+    """
     name = models.CharField(max_length=100)
 
     def __unicode__(self):
@@ -87,6 +114,12 @@ class Feature(models.Model):
 
 
 class FeatureValue(models.Model):
+    """
+    Each feature takes an enumerated set of values. For example,
+    the feature Number in English would take the values: Singular
+    and Plural.
+    """
+
     name = models.CharField(max_length=100)
     feature = models.ForeignKey(Feature, related_name='values')
 
@@ -99,6 +132,29 @@ class FeatureValue(models.Model):
 
 
 class Form(models.Model):
+    """
+    Forms are defined by a particular set of Feature Values. Forms should
+    be thought of as instances of a type represented by the combination of
+    their feature values. They are instances because they are attached to
+    a particular lexeme.
+
+    For example, a form defined by the value "singular" and attached to the
+    lexeme of the concept of a cat as a noun in English would have a written
+    representation of "cat". Likewise, a form with the value "singular" in
+    a different language, with a different concept, would have a different
+    representation. In fact the structure of the data is such that it would be
+    a different form instance even though it has the same feature set. This
+    is because forms are subordinate to lexemes in this structure.
+
+    However, becuase FeatureValues do not require a lexeme, it is possible to
+    present users with the abstract type "singluar" that they may select for
+    a particular form. Those not aware of the structure of the database might
+    not actually realize that "singluar" is not what this model describes.
+
+    In previous versions of LexTerm, this was called a LexicalForm.
+    """
+    #TODO: require that a form not have more than one value for a feature
+
     # name does not define the form, instead it is defined by the features
     # name is a label for the form chosen by the lexicographer it could be
     # "FORMX123" instead of "1st person plural"
@@ -132,6 +188,14 @@ class Form(models.Model):
 
 
 class RepresentationType(models.Model):
+    """
+    The RepresentationType model stores possible representations for forms.
+    There are many different ways of representing a particular form of
+    a lexeme. When dealing with terminology, the default is the written
+    representation, but even writing may be broken down into various
+    systems.
+    """
+
     name = models.CharField(max_length=100, unique=True)
 
     class Meta:
@@ -142,6 +206,10 @@ class RepresentationType(models.Model):
 
 
 class Representation(models.Model):
+    """
+    The Representation model provides instances of representation_types
+    for particular forms.
+    """
     form = models.ForeignKey(Form, related_name="representations")
     representation_type = models.ForeignKey(
         RepresentationType,
