@@ -1,6 +1,10 @@
 import uuid
 from django.db import models
 
+#class FormFeatureManager(models.RelatedManager):
+
+    #def add(self, *args, **kwargs
+
 
 class Language(models.Model):
     """
@@ -81,8 +85,7 @@ class Lexeme(models.Model):
 
     lex_id = models.CharField(max_length=100, unique=True, blank=True)
     lex_class = models.ForeignKey(LexicalClass, related_name="lexemes")
-    concept = models.ForeignKey(
-        'term.Concept', blank=True, null=True, related_name='lexemes')
+    concept = models.ForeignKey('term.Concept', related_name='lexemes')
 
     @property
     def language(self):
@@ -128,7 +131,7 @@ class FeatureValue(models.Model):
         unique_together = ('name', 'feature')
 
     def __unicode__(self):
-        return "FeatureValue<{}>".format(self.value)
+        return "FeatureValue<{}>".format(self.name)
 
 
 class Form(models.Model):
@@ -167,6 +170,13 @@ class Form(models.Model):
     @property
     def lex_class(self):
         return self.lexeme.lex_class
+
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        # make sure that each feature has only one value
+        if len(self.features.all()) != len(Feature.objects.filter(
+                values__forms=self).distinct()):
+            raise ValidationError('Duplicate feature value in {}'.format(self))
 
     def save(self, *args, **kwargs):
         # if necessary toggle lemma status

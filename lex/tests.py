@@ -1,16 +1,57 @@
-"""
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
-
-Replace this with more appropriate tests for your application.
-"""
-
 from django.test import TestCase
+from django.core.exceptions import ValidationError
+from lex.models import Language, LexicalClass, Lexeme, Form,\
+    Feature, FeatureValue
+from term.models import Concept
 
 
-class SimpleTest(TestCase):
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
+class UniqueFeatureConstraintTest(TestCase):
+    """
+    Tests for assuring that a particular Form does not have
+    multiple values from the same Feature.
+    """
+
+    def test_uniqueness_algorithm(self):
+        number = Feature.objects.create(name="NUMBER")
+        gender = Feature.objects.create(name="GENDER")
+        case = Feature.objects.create(name="CASE")
+
+        sing = FeatureValue.objects.create(feature=number, name="sing")
+        #plural = FeatureValue.objects.create(feature=number, name="plural")
+
+        m = FeatureValue.objects.create(feature=gender, name="m")
+        f = FeatureValue.objects.create(feature=gender, name="f")
+        #n = FeatureValue.objects.create(feature=gender, name="n")
+
+        nom = FeatureValue.objects.create(feature=case, name="nom")
+        #gen = FeatureValue.objects.create(feature=case, name="gen")
+        #acc = FeatureValue.objects.create(feature=case, name="acc")
+        #dat = FeatureValue.objects.create(feature=case, name="dat")
+        #abl = FeatureValue.objects.create(feature=case, name="abl")
+
+        lang = Language.objects.create(lang_code="la", name="latintest")
+        pos = LexicalClass.objects.create(language=lang, name="postest")
+        conc = Concept.objects.create()
+        lex = Lexeme.objects.create(lex_class=pos, concept=conc)
+
+        terra = Form.objects.create(lexeme=lex, name="nom fem sing")
+        terra.features.add(nom)
+        terra.features.add(sing)
+
+        self.assertNotIn(
+            f.feature,
+            Feature.objects.filter(values__forms=terra))
+        terra.features.add(f)
+        self.assertIn(f.feature, Feature.objects.filter(values__forms=terra))
+        self.assertEqual(
+            len(terra.features.all()),
+            len(Feature.objects.filter(values__forms=terra).distinct()))
+        terra.features.add(m)
+        self.assertRaises(ValidationError, lambda: terra.full_clean())
+
+    def test_current_database(self):
+        for form in Form.objects.all():
+            try:
+                form.full_clean()
+            except:
+                self.fail('Forms are not clean.')
