@@ -6,6 +6,9 @@ from lex.models import Language, LexicalClass, Lexeme, \
 
 
 class LanguageView(ModelViewSet):
+    """
+    The Language resource accesses the Language model.
+    """
     model = Language
     #serializer_class = LanguageSerializer
 

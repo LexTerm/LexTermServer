@@ -156,7 +156,6 @@ class Form(models.Model):
 
     In previous versions of LexTerm, this was called a LexicalForm.
     """
-    #TODO: require that a form not have more than one value for a feature
 
     # name does not define the form, instead it is defined by the features
     # name is a label for the form chosen by the lexicographer it could be
