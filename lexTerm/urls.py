@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from lex.views import LanguageView, LexicalClassView, LexemeView, \
     FormView, FeatureValueView, FeatureView, RepresentationView, \
-    RepresentationTypeView
+    RepresentationTypeView, CollectionView
 from term.views import ConceptView, SubjectFieldView, NoteView
 
 
@@ -33,24 +33,28 @@ class LexTermApiRouter(DefaultRouter):
             def get(self, request, format=None):
                 ret = {'tbx': reverse('tbx', request=request, format=format)}
                 for key, url_name in api_root_dict.items():
-                    ret[key] = reverse(url_name, request=request, format=format)
+                    ret[key] = reverse(
+                        url_name,
+                        request=request,
+                        format=format)
                 return Response(ret)
 
         return APIRoot.as_view()
 
 
 router = LexTermApiRouter()
-router.register('language', LanguageView)
-router.register('lexical-class', LexicalClassView)
-router.register('lexeme', LexemeView)
-router.register('form', FormView)
-router.register('feature-value', FeatureValueView)
-router.register('feature', FeatureView)
-router.register('representation', RepresentationView)
-router.register('representation-type', RepresentationTypeView)
-router.register('concept', ConceptView)
-router.register('subject-field', SubjectFieldView)
-router.register('note', NoteView)
+router.register('languages', LanguageView)
+router.register('lexicalclasses', LexicalClassView)
+router.register('lexemes', LexemeView)
+router.register('forms', FormView)
+router.register('featurevalues', FeatureValueView)
+router.register('features', FeatureView)
+router.register('representations', RepresentationView)
+router.register('representationtypes', RepresentationTypeView)
+router.register('concepts', ConceptView)
+router.register('subjectfields', SubjectFieldView)
+router.register('notes', NoteView)
+router.register('collections', CollectionView)
 
 admin.autodiscover()
 

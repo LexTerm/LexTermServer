@@ -232,3 +232,11 @@ class Representation(models.Model):
         return "Representation<{}: {}>".format(
             self.representation_type.name,
             self.name)
+
+
+class Collection(models.Model):
+    """
+    A collection of lexemes to help manage portions of the data.
+    """
+    name = models.CharField(max_length=50)
+    lexemes = models.ManyToManyField(Lexeme, related_name="collections")

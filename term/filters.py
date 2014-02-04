@@ -1,15 +1,30 @@
-from rest_framework.filters import BaseFilterBackend
+from rest_framework_chain import ChainedFilterSet, RelatedFilter, \
+    AllLookupsFilter
+from term.models import Concept, Note, SubjectField
 
-# We are doing filtering like this because it is based on multiple parameters from the urlconf
 
-class SubjectFilter(BaseFilterBackend):
-    """
-    Filters querysets based on subject, if present
-    """
-    def filter_queryset(self, request, queryset, view):
-        if 'subject' in view.kwargs:
-            subj = view.kwargs['subject']
-            return queryset.filter(subject=subj)
-        else:
-            return queryset
+class SubjectFieldFilter(ChainedFilterSet):
+    name = AllLookupsFilter(name='name')
+    concepts = RelatedFilter('term.filters.ConceptFilter', name='concepts')
 
+    class Meta:
+        model = SubjectField
+
+
+class ConceptFilter(ChainedFilterSet):
+    concept_id = AllLookupsFilter(name='concept_id')
+    definition = AllLookupsFilter(name='definition')
+    subject_fields = RelatedFilter(SubjectFieldFilter, name='subject_fields')
+    lexemes = RelatedFilter('lex.filters.LexemeFilter', name='lexemes')
+
+    class Meta:
+        model = Concept
+
+
+class NoteFilter(ChainedFilterSet):
+    note = AllLookupsFilter(name='note')
+    note_type = AllLookupsFilter(name='note_type')
+    lexeme = RelatedFilter('lex.filters.LexemeFilter', name='lexeme')
+
+    class Meta:
+        model = Note
