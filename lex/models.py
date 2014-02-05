@@ -1,9 +1,7 @@
 import uuid
 from django.db import models
-
-#class FormFeatureManager(models.RelatedManager):
-
-    #def add(self, *args, **kwargs
+from django.db.models.signals import m2m_changed
+from django.dispatch import receiver
 
 
 class Language(models.Model):
@@ -97,11 +95,6 @@ class Lexeme(models.Model):
         super(Lexeme, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        if self.lemma:
-            return "Lexeme<{}: {}-{}>".format(
-                self.language.locale,
-                self.id,
-                self.lemma)
         return "Lexeme<{}: {}>".format(self.language.locale, self.id)
 
 
@@ -170,13 +163,6 @@ class Form(models.Model):
     def lex_class(self):
         return self.lexeme.lex_class
 
-    def clean(self):
-        from django.core.exceptions import ValidationError
-        # make sure that each feature has only one value
-        if len(self.features.all()) != len(Feature.objects.filter(
-                values__forms=self).distinct()):
-            raise ValidationError('Duplicate feature value in {}'.format(self))
-
     def save(self, *args, **kwargs):
         # if necessary toggle lemma status
         if self.is_lemma:
@@ -240,3 +226,23 @@ class Collection(models.Model):
     """
     name = models.CharField(max_length=50)
     lexemes = models.ManyToManyField(Lexeme, related_name="collections")
+
+
+@receiver(m2m_changed, sender=Form.features.through)
+def limit_feature_combinations(sender, **kwargs):
+    if kwargs['action'] == "pre_add":
+        # clear out any feature values that have the same feature as the new
+        for pk in kwargs['pk_set']:
+            feature = Feature.objects.get(values__pk=pk)
+            for old_value in kwargs['instance'].features.all():
+                if old_value.feature == feature:
+                    kwargs['instance'].features.remove(old_value)
+
+    if kwargs['action'] == "post_add":
+        # sanitize current data
+        existing = []
+        for value in kwargs['instance'].features.all():
+            if value.feature in existing:
+                kwargs['instance'].features.remove(value)
+            else:
+                existing.append(value)

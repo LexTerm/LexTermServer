@@ -1,5 +1,4 @@
 from django.test import TestCase
-from django.core.exceptions import ValidationError
 from lex.models import Language, LexicalClass, Lexeme, Form,\
     Feature, FeatureValue
 from term.models import Concept
@@ -47,11 +46,6 @@ class UniqueFeatureConstraintTest(TestCase):
             len(terra.features.all()),
             len(Feature.objects.filter(values__forms=terra).distinct()))
         terra.features.add(m)
-        self.assertRaises(ValidationError, lambda: terra.full_clean())
-
-    def test_current_database(self):
-        for form in Form.objects.all():
-            try:
-                form.full_clean()
-            except:
-                self.fail('Forms are not clean.')
+        self.assertEqual(
+            len(terra.features.all()),
+            len(Feature.objects.filter(values__forms=terra).distinct()))
