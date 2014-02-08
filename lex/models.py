@@ -117,7 +117,7 @@ class FeatureValue(models.Model):
     """
 
     name = models.CharField(max_length=100)
-    feature = models.ForeignKey(Feature, related_name='values')
+    feature = models.ForeignKey(Feature, related_name='featurevalues')
 
     class Meta:
         verbose_name_plural = "Feature Values"
@@ -145,14 +145,11 @@ class Form(models.Model):
         through='LexicalForm')
 
     @property
-    def lex_class(self):
-        return self.lexeme.lex_class
+    def lexical_classes(self):
+        return LexicalClass.objects.filter(lexemes__forms=self)
 
     def __unicode__(self):
-        return "Form<{}:({}) {}>".format(
-            self.lex_class.language.locale,
-            self.lex_class.name,
-            self.name)
+        return "Form<{}>".format(self.name)
 
 
 class LexicalForm(models.Model):

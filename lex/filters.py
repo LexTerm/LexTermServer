@@ -2,7 +2,7 @@ from rest_framework_chain import ChainedFilterSet, RelatedFilter, \
     AllLookupsFilter
 from lex.models import Language, Lexeme, LexicalClass, \
     Feature, FeatureValue, Form, Representation, RepresentationType, \
-    Collection
+    Collection, LexicalForm
 
 
 class LanguageFilter(ChainedFilterSet):
@@ -31,9 +31,14 @@ class LexemeFilter(ChainedFilterSet):
     lex_class = RelatedFilter(LexicalClassFilter, name='lex_class')
     concept = RelatedFilter('term.filters.ConceptFilter', name='concept')
     notes = RelatedFilter('term.filters.NoteFilter', name='notes')
-    forms = RelatedFilter('lex.filters.FormFilter', name='forms')
+    forms = RelatedFilter(
+        'lex.filters.FormFilter',
+        name='forms',
+        distinct=True)
     collections = RelatedFilter(
-        'lex.filters.CollectionFilter', name='collections')
+        'lex.filters.CollectionFilter',
+        name='collections',
+        distinct=True)
 
     class Meta:
         model = Lexeme
@@ -41,12 +46,8 @@ class LexemeFilter(ChainedFilterSet):
 
 class FormFilter(ChainedFilterSet):
     name = AllLookupsFilter(name='name')
-    is_lemma = AllLookupsFilter(name='is_lemma')
-    lexeme = RelatedFilter(LexemeFilter, name='lexeme')
+    lexemes = RelatedFilter(LexemeFilter, name='lexemes')
     features = RelatedFilter('lex.filters.FeatureValueFilter', name='features')
-    representations = RelatedFilter(
-        'lex.filters.RepresentationFilter',
-        name='representations')
 
     class Meta:
         model = Form
@@ -54,7 +55,9 @@ class FormFilter(ChainedFilterSet):
 
 class FeatureFilter(ChainedFilterSet):
     name = AllLookupsFilter(name='name')
-    values = RelatedFilter('lex.filters.FeatureValueFilter', name='values')
+    featurevalues = RelatedFilter(
+        'lex.filters.FeatureValueFilter',
+        name='featurevalues')
 
     class Meta:
         model = Feature
@@ -71,8 +74,10 @@ class FeatureValueFilter(ChainedFilterSet):
 
 class RepresentationFilter(ChainedFilterSet):
     name = AllLookupsFilter(name='name')
-    form = RelatedFilter(FormFilter, name='form')
-    representation_types = RelatedFilter(
+    lexical_form = RelatedFilter(
+        'lex.filters.LexicalFormFilter',
+        name='lexical_form')
+    representation_type = RelatedFilter(
         'lex.filters.RepresentationTypeFilter',
         name='representation_type')
 
@@ -92,7 +97,21 @@ class RepresentationTypeFilter(ChainedFilterSet):
 
 class CollectionFilter(ChainedFilterSet):
     name = AllLookupsFilter(name='name')
-    lexemes = RelatedFilter(LexemeFilter, name='lexemes')
+    lexemes = RelatedFilter(
+        LexemeFilter,
+        name='lexemes',
+        distinct=True)
 
     class Meta:
         model = Collection
+
+
+class LexicalFormFilter(ChainedFilterSet):
+    is_lemma = AllLookupsFilter(name='is_lemma')
+    lexeme = RelatedFilter(LexemeFilter, name='lexeme')
+    form = RelatedFilter(FormFilter, name='form')
+    representations = RelatedFilter(
+        RepresentationFilter, name='representations')
+
+    class Meta:
+        model = LexicalForm

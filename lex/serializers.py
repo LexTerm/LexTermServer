@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 from lex.models import Language, Lexeme, LexicalClass, \
     Feature, FeatureValue, Form, Representation, RepresentationType, \
-    Collection
+    Collection, LexicalForm
 import logging
 logger = logging.getLogger(__name__)
 
@@ -26,10 +26,16 @@ class LexemeSerializer(ModelSerializer):
             'concept', 'forms', 'lexical_forms', 'notes', 'collections')
 
 
+class LexicalFormSerializer(ModelSerializer):
+    class Meta:
+        model = LexicalForm
+        fields = ('id', 'lexeme', 'form', 'is_lemma', 'representations')
+
+
 class FeatureSerializer(ModelSerializer):
     class Meta:
         model = Feature
-        fields = ('id', 'name', 'values')
+        fields = ('id', 'name', 'featurevalues')
 
 
 class FeatureValueSerializer(ModelSerializer):
@@ -54,7 +60,7 @@ class RepresentationSerializer(ModelSerializer):
 class RepresentationTypeSerializer(ModelSerializer):
     class Meta:
         model = RepresentationType
-        fields = ('id', 'name', 'language', 'representations')
+        fields = ('id', 'name', 'representations')
 
 
 class CollectionSerialzer(ModelSerializer):
