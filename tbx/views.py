@@ -104,7 +104,7 @@ class TBXExportView(APIView):
     #TODO export definitions
     def get(self, request, format=None):
         concepts = {}
-        for form in Form.objects.filter(is_lemma=True, representations__representation_type__name=WRITTEN_REP_TYPE):
+        for form in LexicalForm.objects.filter(is_lemma=True, representations__representation_type__name=WRITTEN_REP_TYPE):
             concept_id = form.lexeme.concept.concept_id
             concepts.setdefault(concept_id, {})
             lang_code = form.lexeme.language.lang_code
@@ -229,19 +229,19 @@ def import_term(tig, lang, concept):
 
     # we can't know what form to create, just use a placeholder until the user changes it
     # first check if the placeholder has already been created
-    lemma_form = get_or_none(Form, name=TBX_BASIC_PLACEHOLDER, lexeme=lexeme)
-    if not lemma_form:
-        lemma_form = Form(
-            name=TBX_BASIC_PLACEHOLDER,
-            lexeme=lexeme,
-            is_lemma=True)
-        lemma_form.save()
-        print(
-            "created temporary form: {} for lexical class: {}".format(TBX_BASIC_PLACEHOLDER, pos))
+    tbx_form = get_or_none(Form, name=TBX_BASIC_PLACEHOLDER)
+    if not tbx_form:
+        tbx_form = Form(name=TBX_BASIC_PLACEHOLDER)
+        tbx_form.save()
+
+    lexical_form = get_or_none(LexicalForm, form=tbx_form, lexeme=lexeme)
+    if not lexical_form:
+        lexical_form = LexicalForm(form=tbx_form, lexeme=lexeme, is_lemma=True)
+        lexical_form.save()
 
     rep = Representation(
         name=term,
-        form=lemma_form,
+        lexical_form=lexical_form,
         representation_type=RepresentationType.objects.get_or_create(name=WRITTEN_REP_TYPE)[0])
     rep.save()
     print(u"created term: {}".format(term))

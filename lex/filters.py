@@ -32,6 +32,8 @@ class LexemeFilter(ChainedFilterSet):
     concept = RelatedFilter('term.filters.ConceptFilter', name='concept')
     notes = RelatedFilter('term.filters.NoteFilter', name='notes')
     forms = RelatedFilter('lex.filters.FormFilter', name='forms')
+    collections = RelatedFilter(
+        'lex.filters.CollectionFilter', name='collections')
 
     class Meta:
         model = Lexeme

@@ -35,12 +35,12 @@ class Language(models.Model):
     @property
     def features(self):
         return Feature.objects.filter(
-            values__forms__lexeme__lex_class__language=self)
+            values__forms__lexemes__lex_class__language=self)
 
     @property
     def representation_types(self):
         return RepresentationType.objects.filter(
-            representations__form__lexeme__lex_class__language=self)
+            representations__lexical_form__lexeme__lex_class__language=self)
 
     def __unicode__(self):
         return "Language<{}>".format(self.locale)
@@ -60,11 +60,11 @@ class LexicalClass(models.Model):
 
     @property
     def forms(self):
-        return Form.objects.filter(lexeme__lex_class=self)
+        return Form.objects.filter(lexemes__lex_class=self)
 
     @property
     def features(self):
-        return Feature.objects.filter(values__forms__lexeme__lex_class=self)
+        return Feature.objects.filter(values__forms__lexemes__lex_class=self)
 
     def __unicode__(self):
         return "LexicalClass<{}: {}>".format(self.language.locale, self.name)
@@ -129,57 +129,59 @@ class FeatureValue(models.Model):
 
 class Form(models.Model):
     """
-    Forms are defined by a particular set of Feature Values. Forms should
-    be thought of as instances of a type represented by the combination of
-    their feature values. They are instances because they are attached to
-    a particular lexeme.
+    Forms are defined by a particular set of Feature Values.
 
-    For example, a form defined by the value "singular" and attached to the
-    lexeme of the concept of a cat as a noun in English would have a written
-    representation of "cat". Likewise, a form with the value "singular" in
-    a different language, with a different concept, would have a different
-    representation. In fact the structure of the data is such that it would be
-    a different form instance even though it has the same feature set. This
-    is because forms are subordinate to lexemes in this structure.
-
-    However, becuase FeatureValues do not require a lexeme, it is possible to
-    present users with the abstract type "singluar" that they may select for
-    a particular form. Those not aware of the structure of the database might
-    not actually realize that "singluar" is not what this model describes.
-
-    In previous versions of LexTerm, this was called a LexicalForm.
+    :name does not define the form, instead it is defined by the features
+    :name is a label for the form chosen by the lexicographer it could be
+    "FORMX123" instead of "1st person plural"
     """
 
-    # name does not define the form, instead it is defined by the features
-    # name is a label for the form chosen by the lexicographer it could be
-    # "FORMX123" instead of "1st person plural"
     name = models.CharField(max_length=100)
     # features are instances (values) of the features that the form uses
     features = models.ManyToManyField(FeatureValue, related_name="forms")
-    lexeme = models.ForeignKey(Lexeme, related_name='forms')
-    is_lemma = models.BooleanField()
+    lexemes = models.ManyToManyField(
+        Lexeme,
+        related_name='forms',
+        through='LexicalForm')
 
     @property
     def lex_class(self):
         return self.lexeme.lex_class
-
-    def save(self, *args, **kwargs):
-        # if necessary toggle lemma status
-        if self.is_lemma:
-            try:
-                lemma = Form.objects.get(is_lemma=True, lexeme=self.lexeme)
-                if self != lemma:
-                    lemma.is_lemma = False
-                    lemma.save()
-            except Form.DoesNotExist:
-                pass
-        super(Form, self).save()
 
     def __unicode__(self):
         return "Form<{}:({}) {}>".format(
             self.lex_class.language.locale,
             self.lex_class.name,
             self.name)
+
+
+class LexicalForm(models.Model):
+    """
+    This is an intermediary model for storing information about the
+    relationship between a lexeme and a form. This information includes whether
+    the form is the lemma for the given lexeme and also the representations
+    that pertain tothe relationship. This model allows us to avoid duplication
+    of forms via lexemes.
+    """
+
+    lexeme = models.ForeignKey(Lexeme, related_name="lexical_forms")
+    form = models.ForeignKey(Form, related_name="lexical_forms")
+    is_lemma = models.BooleanField()
+
+    def save(self, *args, **kwargs):
+        # if necessary toggle lemma status
+        if self.is_lemma:
+            try:
+                lemma = LexicalForm.objects.get(
+                    is_lemma=True,
+                    lexeme=self.lexeme,
+                    form=self.form)
+                if self != lemma:
+                    lemma.is_lemma = False
+                    lemma.save()
+            except LexicalForm.DoesNotExist:
+                pass
+        super(LexicalForm, self).save()
 
 
 class RepresentationType(models.Model):
@@ -205,14 +207,16 @@ class Representation(models.Model):
     The Representation model provides instances of representation_types
     for particular forms.
     """
-    form = models.ForeignKey(Form, related_name="representations")
+    lexical_form = models.ForeignKey(
+        LexicalForm,
+        related_name="representations")
     representation_type = models.ForeignKey(
         RepresentationType,
         related_name="representations")
     name = models.CharField(max_length=100)
 
     class Meta:
-        unique_together = ('form', 'representation_type',)
+        unique_together = ('lexical_form', 'representation_type',)
 
     def __unicode__(self):
         return "Representation<{}: {}>".format(

@@ -23,7 +23,7 @@ class LexemeSerializer(ModelSerializer):
         model = Lexeme
         fields = (
             'id', 'lex_id', 'lex_class',
-            'concept', 'forms', 'notes', 'collections')
+            'concept', 'forms', 'lexical_forms', 'notes', 'collections')
 
 
 class FeatureSerializer(ModelSerializer):
@@ -42,13 +42,13 @@ class FormSerializer(ModelSerializer):
     class Meta:
         model = Form
         fields = (
-            'id', 'name', 'is_lemma', 'lexeme', 'features', 'representations')
+            'id', 'name', 'lexemes', 'lexical_forms', 'features')
 
 
 class RepresentationSerializer(ModelSerializer):
     class Meta:
         model = Representation
-        fields = ('id', 'name', 'form', 'representation_type')
+        fields = ('id', 'name', 'lexical_form', 'representation_type')
 
 
 class RepresentationTypeSerializer(ModelSerializer):

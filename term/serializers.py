@@ -9,7 +9,6 @@ class SubjectFieldSerializer(ModelSerializer):
 
 
 class ConceptSerializer(ModelSerializer):
-    #subjectFields = RelatedField(many=True)
     class Meta:
         model = Concept
         fields = ('id', 'concept_id', 'definition', 'subject_fields')
