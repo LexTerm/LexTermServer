@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from lex.models import *
 from term.models import *
 from rest_framework.status import *
@@ -203,12 +204,10 @@ def import_lang_set(lang_set, concept):
 
 def import_term(tig, lang, concept):
     term = tig.findtext('./term')
-    print(u"importing term: {}".format(term))
+    #print(u"importing term: {}".format(term))
     # TODO: add all termNotes
     pos = tig.findtext("./termNote[@type='partOfSpeech']")
     if not pos:
-        logger.warning(
-            u"No partOfSpeech data found for {}.".format(term))
         pos = "*"  # Special character for pos
     pos = pos.lower()
     lex_class = get_or_none(LexicalClass, name=pos, language=lang)
@@ -221,7 +220,7 @@ def import_term(tig, lang, concept):
     if not lexeme:
         lexeme = Lexeme(language=lang, lex_class=lex_class, concept=concept)
         lexeme.save()
-        print(u"created lexeme for term: {}".format(term))
+        #print(u"created lexeme for term: {}".format(term))
     else:
         # TBX standard (ISO 30042) says that terms are defined as being in lemma / citation form
         # So if we have the lexeme, the term should already exist in the db
@@ -244,7 +243,6 @@ def import_term(tig, lang, concept):
         lexical_form=lexical_form,
         representation_type=RepresentationType.objects.get_or_create(name=WRITTEN_REP_TYPE)[0])
     rep.save()
-    print(u"created term: {}".format(term))
 
 
 # Try to get an object that matches the query. If it doesn't exist, return None
