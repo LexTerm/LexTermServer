@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from lex.views import LanguageView, LexicalClassView, LexemeView, \
     FormView, FeatureValueView, FeatureView, RepresentationView, \
-    RepresentationTypeView, CollectionView
+    RepresentationTypeView, CollectionView, LexicalFormView
 from term.views import ConceptView, SubjectFieldView, NoteView
 
 
@@ -47,6 +47,7 @@ router.register('languages', LanguageView)
 router.register('lexicalclasses', LexicalClassView)
 router.register('lexemes', LexemeView)
 router.register('forms', FormView)
+router.register('lexicalforms', LexicalFormView)
 router.register('featurevalues', FeatureValueView)
 router.register('features', FeatureView)
 router.register('representations', RepresentationView)

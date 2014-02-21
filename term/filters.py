@@ -15,7 +15,8 @@ class ConceptFilter(ChainedFilterSet):
     concept_id = AllLookupsFilter(name='concept_id')
     definition = AllLookupsFilter(name='definition')
     subject_fields = RelatedFilter(SubjectFieldFilter, name='subject_fields')
-    lexemes = RelatedFilter('lex.filters.LexemeFilter', name='lexemes')
+    lexemes = RelatedFilter(
+        'lex.filters.LexemeFilter', name='lexemes', distinct=True)
 
     class Meta:
         model = Concept

@@ -3,14 +3,14 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from lex.models import Language, LexicalClass, Lexeme, \
     Form, FeatureValue, Feature, Representation, RepresentationType, \
-    Collection
+    Collection, LexicalForm
 from lex.serializers import LanguageSerializer, LexicalClassSerializer, \
     LexemeSerializer, FormSerializer, FeatureValueSerializer, \
     FeatureSerializer, RepresentationSerializer, RepresentationTypeSerializer,\
-    CollectionSerialzer
+    CollectionSerialzer, LexicalFormSerializer
 from lex.filters import LanguageFilter, LexicalClassFilter, LexemeFilter, \
     FormFilter, FeatureValueFilter, FeatureFilter, RepresentationFilter, \
-    RepresentationTypeFilter, CollectionFilter
+    RepresentationTypeFilter, CollectionFilter, LexicalFormFilter
 
 
 class LanguageView(ModelViewSet):
@@ -24,12 +24,20 @@ class LanguageView(ModelViewSet):
     @link()
     def lexemes(self, request, pk=None):
         obj = self.get_object()
-        return Response(obj.lexemes)
+        serializer = LexemeSerializer(obj.lexemes)
+        return Response(serializer.data)
 
     @link()
     def representation_types(self, request, pk=None):
         obj = self.get_object()
-        return Response(obj.representation_types)
+        serializer = RepresentationTypeSerializer(obj.representation_types)
+        return Response(serializer.data)
+
+    @link()
+    def lexical_classes(self, request, pk=None):
+        obj = self.get_object()
+        serializer = LexicalClassSerializer(obj.lexical_classes)
+        return Response(serializer.data)
 
 
 class LexicalClassView(ModelViewSet):
@@ -40,12 +48,14 @@ class LexicalClassView(ModelViewSet):
     @link()
     def forms(self, request, pk=None):
         obj = self.get_object()
-        return Response(obj.forms)
+        serializer = FormSerializer(obj.forms)
+        return Response(serializer.data)
 
     @link()
     def features(self, request, pk=None):
         obj = self.get_object()
-        return Response(obj.features)
+        serializer = FeatureSerializer(obj.features)
+        return Response(serializer.data)
 
 
 class LexemeView(ModelViewSet):
@@ -56,13 +66,26 @@ class LexemeView(ModelViewSet):
     @link()
     def forms(self, request, pk=None):
         obj = self.get_object()
-        return Response(obj.forms.all())
+        serializer = FormSerializer(obj.forms.all())
+        return Response(serializer.data)
+
+    @link()
+    def lexical_forms(self, request, pk=None):
+        obj = self.get_object()
+        serializer = LexicalFormSerializer(obj.lexical_forms.all())
+        return Response(serializer.data)
 
 
 class FormView(ModelViewSet):
     model = Form
     serializer_class = FormSerializer
     filter_class = FormFilter
+
+
+class LexicalFormView(ModelViewSet):
+    model = LexicalForm
+    serializer_class = LexicalFormSerializer
+    filter_class = LexicalFormFilter
 
 
 class FeatureValueView(ModelViewSet):

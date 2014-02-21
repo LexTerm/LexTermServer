@@ -1,0 +1,6759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE martif SYSTEM "TBXBasiccoreStructV02.dtd">
+<martif type="TBX-Basic" xml:lang="en-US">
+  <martifHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>-</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>license: CC-BY 3.0</p>
+        <p>directionality: monodirectional</p>
+        <p>description:  This is a medical dictionary. You may use this dictionary only when you agreed that you and you alone are fully responsible for the results of its use. The author of the original data, AAMT and its members do not guarantee the contents of this dictionary including, but not limited to its accuracy. Some part of speech properties are indicated as noun, even when they are not. / このデータは医学辞書です。このデータは使用者が使用結果に対して全責任を持つ場合にのみお使い頂けます。データの著作者、AAMTおよびAAMTのメンバーは正確性を含め、辞書の内容について一切の保証はいたしません。品詞が名詞でない場合も名詞扱いになっていることがあります。</p>
+        <p>creator: Medical Informatics, School of Allied Health Sciences, Kitazato University (2009)</p>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <p type="XCSURI">TBXBasicXCSV02.xcs</p>
+    </encodingDesc>
+  </martifHeader>
+  <text>
+    <body>
+      <termEntry id="C001">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/2 T vector</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>1/2Tベクトル</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C002">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/2FF</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>1/2拡張分画</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C003">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/3 ER mean</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>駆出早期1/3での平均駆出速度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C004">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/3EF</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>1/3駆出分画</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C005">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/3ER mean</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>駆出早期1/3での平均駆出速度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C006">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/3FF</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>1/3充満分画</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C007">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>1/3FR mean</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>拡張早期1/3での左室平均充満速度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C008">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>11-deoxycorticosterone acetate salt hypertension</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>DOCA食塩高血圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C009">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>11-deoxycortisosterone</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>11-デオキシコルチコステロン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C010">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>131I-hippurate</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>131I-ヒプル酸塩</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C011">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17 α-hydroxycorticosteroid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17αヒドロキシコルチコステロイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C012">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17 β-hydroxysteroid dehydrogenase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17βヒドロキシステロイドデヒドロゲナーゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C013">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-hydroxycorticoid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17-ヒドロキシコルチコイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C014">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-hydroxydesoxycorticosterone</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17-ヒドロキシデゾキシコルチコステロン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C015">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-hydroxyprogesterone</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17-ヒドロキシプロゲステロン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C016">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-ketosteroid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17-ケトステロイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C017">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-ks</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17-ケトステロイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C018">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>17-OHCS</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>17αヒドロキシコルチコステロイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C019">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>2,3-diphosphoglycerate</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>2,3-ジフォスフォグリセリン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C020">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>2,3-DPG</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>2,3-ジフォスフォグリセリン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C021">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>3-dimethyl-p-iodophenyl-pentadecanoic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>3-ジメチル-p-ヨード フェニルペンタデカン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C022">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>4-hydroxybutylic aciduria</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>4-ヒドロキシブチル酸尿症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C023">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>50% lethal dose</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>50％致死量</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C024">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>5-aminolevulinic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>δアミノレブリン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C025">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>5-aminolevulinic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>5-アミノレブリン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C026">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>5'-nucleotidase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>5'ヌクレオチダーゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C027">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>7-pinhole collimator </term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>7-ピンホール コリメータ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C028">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>7-pinhole collimator </term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>7-ピンホールコリメータ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C029">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>9-hydroxyoctadecadienoic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>9-ヒドロキシオクタデカジエン酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C030">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A band</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A帯</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C031">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A behavior pattern</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A型行動様式</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C032">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A fiber</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A線維</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C033">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A mode echocardiography</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>Aモード心エコー法</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C034">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A standard light</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A標準光源</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C035">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A wave</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A波</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C036">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>a wave</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>a波</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C037">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>A-band</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>A帯</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C038">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>失歩</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C039">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C040">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal actinomycosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部放射菌症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C041">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal aortic aneurysm</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部大動脈瘤</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C042">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal ballottement</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部浮球感</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C043">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal bandage</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹帯</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C044">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal bloating</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部膨満</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C045">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal breathing</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹式呼吸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C046">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal bruit</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部血管雑音</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C047">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal cavity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹腔</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C048">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal circumference</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹囲</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C049">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal cramp</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部けいれん</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C050">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal dropsy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹水</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C051">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal face</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹膜炎顔貌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C052">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal Hodgkin's disease</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部型ホジキン病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C053">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal muscle pressure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C054">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal muscle reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹筋反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C055">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal pain</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹痛</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C056">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal paracentesis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹腔穿刺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C057">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal pressure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹腔内圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C058">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal proptosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部突出</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C059">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal purpura</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腸性紫斑病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C060">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹壁反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C061">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal region</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹部</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C062">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal respiration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹式呼吸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C063">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal typhus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腸チフス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C064">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal wall</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹壁</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C065">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal wall abscess</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹壁膿瘍</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C066">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal wall reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹壁反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C067">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abdominal window method</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腹窓法</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C068">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abducens nerve</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>外転神経</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C069">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abduction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>外転</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C070">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abduction gait</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>外転歩行</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C071">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrancy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>変行伝導</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C072">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>変行</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C073">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異所性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C074">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異所</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C075">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant conduction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>変行伝導</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C076">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant goiter</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異所性甲状腺腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C077">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant intraventricular conduction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>心室内変行伝導</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C078">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant pancreas</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>迷入膵</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C079">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant subclavian artery</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異所性鎖骨下動脈</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C080">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberrant vessel</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>迷入血管</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C081">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>収差</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C082">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異所</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C083">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C084">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aberration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>迷入</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C085">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abiotrophy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無生活力</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C086">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablactation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>離乳</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C087">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablactation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>乳離れ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C088">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>剥離</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C089">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アブレーション</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C090">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>切断</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C091">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>離解</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C092">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>切除</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C093">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablepsia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>失明</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C094">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ablepsia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>盲</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C095">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C096">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>奇形</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C097">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>変則</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C098">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal behavior</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常行動</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C099">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal bleeding</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常出血</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C100">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal hemoglobin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常ヘモグロビン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C101">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal negative area</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常負領域</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C102">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal positive area</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常正領域</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C103">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormal Q wave</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異常Q波</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C104">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abnormality</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>奇形</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C105">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ABO antigen</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ABO抗原</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C106">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ABO antigen blood group</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ABO式血液型</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C107">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ABO antigen system</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ABO式血液型分類法</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C108">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ABO blood group</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ABO式血液型</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C109">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ABO blood type</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ABO式血液型</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C110">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>流産</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C111">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不全型</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C112">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive infection</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不発感染</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C113">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive infection</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>頓挫感染</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C114">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive infection</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不全感染</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C115">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abortive typhoid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>頓挫性腸チフス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C116">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abrasion</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>剥脱</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C117">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abrasion</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>剥離</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C118">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abrupt clsure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性閉塞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C119">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abruption</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>剥離</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C120">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abscess</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>膿瘍</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C121">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abscess endocarditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>膿性心内膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C122">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absence</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>欠損</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C123">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absence</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>欠乏</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C124">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absence epileptica</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>てんかん性欠神</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C125">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absence seizure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>欠伸発作</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C126">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absence seizure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アプサンス発作</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C127">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute cardiac dullness</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>心絶対濁音界</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C128">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute diet</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対食</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C129">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute error</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対誤差</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C130">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute hearing</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対音感</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C131">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute immunity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対免疫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C132">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute indication</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対的適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C133">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute muscle strength</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対筋力</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C134">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute pitch hearing</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対音感</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C135">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute refractory period</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対不応期</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C136">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absolute refractory phase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>絶対不応期</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C137">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorbanbent</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸収量</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C138">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorbanbent cotton</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>脱脂綿</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C139">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorbance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸収度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C140">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorbance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸光度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C141">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorbent cotton</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>脱脂綿</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C142">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸収</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C143">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸水軟膏</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C144">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸着</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C145">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption band</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸収帯</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C146">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption coefficient</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸収係数</term>
+            <note>ガスの</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C147">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption ointment</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>吸水軟膏</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C148">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>absorption rate constant</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>呼吸速度定数</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C149">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abstinence</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>禁断</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C150">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abstinence symptom</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>禁断症状</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C151">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abuse</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>乱用</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C152">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>abusolute alchol</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無水アルコール</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C153">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acalculia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>失算</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C154">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthocephaliasis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>鉤頭虫症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C155">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthocheilonemiasis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>常在糸状虫症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C156">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthocyte</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>有棘赤血球</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C157">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthokeratodermia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>角質増殖症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C158">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthokeratodermia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>棘細胞増殖症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C159">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acantholysis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>棘細胞離開</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C160">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acantholysis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>棘融解</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C161">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>棘細胞腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C162">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アカントーシス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C163">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>有棘層肥厚</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C164">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acanthosis nigricance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>黒色表皮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C165">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acardia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無心症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C166">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acardius</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無心体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C167">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acariasis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ダニ症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C168">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acaryote</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無核</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C169">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acaryote</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無核細胞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C170">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acatalasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無カタラーゼ症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C171">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acataphasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>錯語症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C172">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acataphasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>言語不当配列</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C173">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleractor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速器</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C174">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleractor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>促進神経</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C175">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleractor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速装置</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C176">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerans</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>促進神経</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C177">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C178">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated conduction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>促進伝導</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C179">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated ectopic rhythm</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>頻脈性異所性調律</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C180">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated hypertension</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速型高血圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C181">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated hypertension</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>移行型高血圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C182">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerated hypertension</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>進行性高血圧</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C183">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速化現象</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C184">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleration flow</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速血流</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C185">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceleration time</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速時間</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C186">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>促進神経</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C187">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加速装置</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C188">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accelerator of coagulation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>凝固促進因子</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C189">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accentuation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>亢進</term>
+            <note>心音の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C190">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceptable diary intake</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>一日摂取許容量</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C191">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acceptable dose</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>許容線量</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C192">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C193">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>補助的</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C194">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>付属</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C195">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory chromosome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>異形染色体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C196">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory conduction pathway</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副伝導路</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C197">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory gland</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副腺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C198">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory lobe</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副肺葉</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C199">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory lobe</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副葉</term>
+            <note>肺の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C200">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory lung</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副肺葉</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C201">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory lung</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副葉</term>
+            <note>肺の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C202">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory nasal sinus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副鼻腔</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C203">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory nerve</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副神経</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C204">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory pancreas</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副膵</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C205">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory pathway</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副伝導路</term>
+            <note>WPW症候群の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C206">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory pathway syndrome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副伝導路症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C207">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory respiratory muscle</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>補助呼吸筋</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C208">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory spleen</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>副脾</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C209">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accessory symptom</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>随伴症状</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C210">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accident</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不慮の事故</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C211">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accident</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>偶発症候</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C212">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accident</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>災害</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C213">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accident neurosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>災害神経症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C214">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accident neurosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>災害ノイローゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C215">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>事故</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C216">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental dead</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>事故死</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C217">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental dead</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>災害死</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C218">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental death</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>事故死</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C219">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental death</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>災害死</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C220">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accidental death</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>偶発死</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C221">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>環境順応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C222">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>人工気候</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C223">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>馴致</term>
+            <note>微生物の作用による</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C224">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation fever</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>馴化熱</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C225">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation fever</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>順化熱</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C226">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation to cold</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>寒冷順化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C227">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimation to heat</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>暑熱順化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C228">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>気候順化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C229">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>環境順応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C230">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>人工気候</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C231">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>馴致</term>
+            <note>微生物の作用による</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C232">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization to cold</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>寒冷順化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C233">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acclimatization to high altitude</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>高所適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C234">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>馴化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C235">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C236">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>調節</term>
+            <note>眼筋の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C237">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>順応</term>
+            <note>神経などの</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C238">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation paresis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>調節不全麻痺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C239">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation paresis palsay</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>調節不全麻痺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C240">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>遠近調節反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C241">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodation to high altitude</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>高所適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C242">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accommodative asthenopia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>調節性眼精疲労</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C243">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accumulated dose</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>蓄積線量</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C244">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accumulation curve</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>集積曲線</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C245">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accuracy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>正確度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C246">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accuracy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>精度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C247">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>accuracy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>正診率</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C248">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ACD solution</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ACD液</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C249">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acephalias</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無頭症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C250">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acephalobrachus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無頭腕体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C251">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acephalus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無頭体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C252">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acephaly</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無頭症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C253">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acervulus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>脳砂</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C254">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetabulum</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>寛骨臼</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C255">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetabulum</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>股臼</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C256">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetanilid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセトアニリド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C257">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetate</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酢酸塩</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C258">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酢酸</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C259">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetone</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセトン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C260">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetone body</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセトン体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C261">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetyl CoA</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセチルCoA</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C262">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetylcarnitine</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセチルカルニチン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C263">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetylcholine</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセチルコリン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C264">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetylcholinesterase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセチルコリンエステラーゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C265">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acetylsalicylic acid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アスピリン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C266">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Ach</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アセチルコリン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C267">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achalasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>特発性食道拡張症)</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C268">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achalasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>食道弛緩不全症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C269">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ache</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>うずく痛み</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C270">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acheiropodia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無手足症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C271">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Achilles</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アキレス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C272">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Achilles tendon</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アキレス腱</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C273">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Achilles tendon reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アキレス腱反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C274">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>aching pain</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>うずく痛み</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C275">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achoresis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>縮小症</term>
+            <note>胃、膀胱などの</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C276">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromacyte</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>血球影</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C277">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>蒼白</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C278">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無色素性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C279">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatic</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無色</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C280">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatic color</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無彩色</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C281">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatic series</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無彩色系列</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C282">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatic series</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>色なし系列</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C283">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不染色質</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C284">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>非染色体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C285">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatism</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無色素症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C286">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatism</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無色症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C287">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatopsia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>色盲</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C288">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromatosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>皮膚色素欠乏症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C289">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>皮膚色素欠乏症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C290">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromodermia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>白斑</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C291">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromodermia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>皮膚色素欠乏症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C292">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>achromotrichia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>毛髪色素欠乏症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C293">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid base</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸塩基</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C294">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid diet</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性食</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C295">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid phosphatase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性ホスファターゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C296">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid phosphatase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性リン酸分解酵素</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C297">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid smell</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸臭</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C298">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid taste</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸味</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C299">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-base balance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸塩基平衡</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C300">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-base balance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸アルカリ平衡</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C301">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-base balance disturbance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸塩基平衡障害</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C302">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-base equilibrium</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸塩基平衡</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C303">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-citrate-dextrose solution</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ACD液</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C304">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-fast</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>抗酸性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C305">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-fast bacterium</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>抗酸菌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C306">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-fast organism</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>抗酸菌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C307">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acid-fast stain</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>抗酸染色</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C308">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidic</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C309">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidic dye</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性色素</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C310">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidic dyspepsia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>多酸性消化不良</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C311">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidification</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸性化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C312">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidifying diuretic</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>酸形成性利尿薬</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C313">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidophilic acidophil cell</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>好酸性細胞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C314">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidophilic adenoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>好酸性細胞腺腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C315">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidophilic cell</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>好酸性細胞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C316">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidophilic leukocyte</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>好酸球</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C317">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acidosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アシドーシス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C318">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Acinetobactor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アシネトバクター</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C319">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Acinetobactor calcoaceticus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アシネトバクター-カルコアセチカス</term>
+            <note>アシネトバクター菌の一つ</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C320">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>房状</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C321">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>細葉状</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C322">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous adenoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺房状腺腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C323">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous cancer</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>小葉癌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C324">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous carcinoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>小葉癌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C325">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinous gland</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>細葉状腺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C326">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺房</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C327">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acinus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>細葉</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C328">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acme</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>病勢極期</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C329">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acme</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクメ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C330">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acne</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>座瘡</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C331">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acne</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクネ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C332">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acne erythematosa</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>赤鼻</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C333">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acne rosacea</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>赤鼻</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C334">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoria</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>満腹感欠如</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C335">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoria</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無満腹感</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C336">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acormus</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>無胴体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C337">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴覚</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C338">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic center</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴覚中枢</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C339">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic impedance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>音響インピーダンス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C340">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic neurinoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴神経鞘腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C341">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic neuroma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴神経腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C342">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic schwannoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴神経鞘腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C343">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic schwannoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>聴神経シュヴァン細胞腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C344">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic spectrum</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>音響スペクトル</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C345">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acoustic trauma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>音響性外傷</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C346">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired character</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>獲得形質</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C347">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired heart disease</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天性心疾患</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C348">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired hemolytic anemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天性溶血性貧血</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C349">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired immune deficiency syndrome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天性免疫不全症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C350">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired immunity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>獲得免疫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C351">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired immunity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天免疫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C352">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquired immunodeficiency syndrome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天性免疫不全症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C353">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquiredcharacter</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>後天形質</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C354">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acquisition time</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>収集時間</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C355">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acrasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不摂生</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C356">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acrasia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>不養生</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C357">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acredema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>先端浮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C358">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acredema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>肢端浮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C359">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acroarthritis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>四肢関節炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C360">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acroedema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>先端浮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C361">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acroedema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>肢端浮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C362">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acrolein</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクロレイン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C363">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acromegaly</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>先端巨大症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C364">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acromicria</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>先端矮小症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C365">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acromion</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>肩峰</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C366">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>across fiber pattern theory</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>総神経線維パターン説</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C367">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acrotic limb</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>上行脚隆起の切痕</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C368">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>ACTH-MSH syndrome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>ACTH-MSH症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C369">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C370">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actin isoform</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチン・アイソフォーム</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C371">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>日射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C372">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>紫外線</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C373">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic cheilitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>日射性口唇炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C374">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic chilitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>日射性口唇炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C375">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic retinitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>紫外線網膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C376">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinic retinitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>化学線網膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C377">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチニン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C378">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinobacillus actinomycetemcomitance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチノバチルス-アクチノミセテムコミタンンス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C379">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinobacillus actinomycetemcomitance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチノバチルス菌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C380">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomyces</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>放射菌属</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C381">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomyces</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチノミセス属</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C382">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomycin D</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチノマイシンD</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C383">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomycomycotic abscess</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>放射菌膿瘍</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C384">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomycosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクチノミセス症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C385">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomycosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>放線菌症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C386">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actinomycotic abscess</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>放線菌膿瘍</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C387">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>action current</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動電流</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C388">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>action potential</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動電位</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C389">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>action potential amplitude</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動電位振幅</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C390">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>action potential duration</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動電位持続時間</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C391">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>action tremor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>動作振戦</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C392">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activable tracer</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>放射化トレーサ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C393">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activated charcoal</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性炭</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C394">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activated macrophage</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性化マクロファージ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C395">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activated sleep</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>賦活睡眠</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C396">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C397">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>賦活</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C398">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C399">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation energy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性化エネルギー</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C400">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation heat</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動化熱</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C401">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation recovery interval</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>興奮回復間隔</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C402">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation sequence</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>興奮順序</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C403">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activation unblock</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性化ブロック解除</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C404">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>賦活体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C405">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性薬</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C406">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>賦活物質</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C407">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active carrier</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動性保菌者</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C408">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active electrode</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>探査電極</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C409">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active exercise</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>自動運動</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C410">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active immunity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>能動免疫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C411">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active immunity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動免疫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C412">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active lipid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性リピッド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C413">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active metabolite</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活性代謝物</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C414">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active movement</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>自発運動</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C415">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active rest</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>積極的休息</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C416">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active sleep</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>賦活睡眠</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C417">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active state</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動状態</term>
+            <note>筋の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C418">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active sweat gland</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>能動汗腺</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C419">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active tension</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動張力</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C420">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active transport</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>能動輸送</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C421">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>active tuberculosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動性結核</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C422">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activities of dairy living</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>日常生活動作</term>
+            <note>リハビリテーションの</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C423">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activity coefficient</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>イオン活動度係数</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C424">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activity coefficient</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動度係数</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C425">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>activity hypertrophy</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>活動性肥大</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C426">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>actomyosin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アクトミオシン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C427">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acuity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>明瞭度</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C428">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acuity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>鋭敏</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C429">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C430">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute abdomen</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性腹症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C431">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute bacterial endocarditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性細菌性心内膜症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C432">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute bronchitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性気管支炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C433">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute chorea</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性舞踏症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C434">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute compliance</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>早期コンプライアンス</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C435">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute conjunctivitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性結膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C436">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute coronary occlusion</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性冠閉塞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C437">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute disease</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性疾患</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C438">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute eczema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性湿疹</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C439">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute endocarditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性心内膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C440">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute exacerbation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性増悪</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C441">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute exanthema</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性発疹</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C442">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute experiment</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性実験</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C443">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute exposure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性被爆</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C444">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute fulminating type</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性激症型</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C445">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute hemorrhagic leukoencephalitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性出血性白質脳炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C446">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute interstitial pneumonia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性間質性肺炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C447">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute intestitial pneumonia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性間質性肺炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C448">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C449">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute lymphatic leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性リンパ性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C450">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute lymphoblastic leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性リンパ性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C451">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myelitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性脊髄炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C452">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myeloblastic leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性骨髄芽球性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C453">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myelocytic leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性骨髄性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C454">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myeloid leukemia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性骨髄性白血病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C455">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myocardial infarction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性心筋梗塞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C456">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute myocarditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性心筋炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C457">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute nephritis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性腎炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C458">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute occlusion</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性閉塞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C459">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute pericarditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性心膜炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C460">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute pneumonia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性肺炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C461">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute poisoning</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性中毒</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C462">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute purulent myositis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性化膿性筋炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C463">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute renal failure</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性腎不全</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C464">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute response</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性期反応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C465">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute stage</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性期</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C466">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute thyroiditis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性甲状腺炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C467">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute tonsillitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性扁桃炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C468">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acute toxicity</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>急性毒性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C469">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acyanoblepsia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>青色盲</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C470">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acyanopia</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>青色盲</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C471">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acyanotic</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>非チアノーゼ性</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C472">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acyl CoA</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アシルCoA</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C473">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>acylcarnitine</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アシルカルニチン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C474">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adamantblast</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>エナメル芽細胞</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C475">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adamantin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>エナメル質</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C476">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adamantinoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>エナメル上皮腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C477">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Adamkiewicz artery</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アダムキーヴィッツ動脈</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C478">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Adamkiewicz artery</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>前脊髄動脈</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C479">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>順応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C480">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>調節</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C481">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C482">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation disease</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>適応症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C483">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation syndrome</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>適応症候群</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C484">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation to environment</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>環境適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C485">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptation to high altitude</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>高所適応</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C486">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adaptive enzyme</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>適応酵素</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C487">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>addiction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>渇望</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C488">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>Addison's disease</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アジソン病</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C489">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>addition color</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>和色</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C490">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>相加的</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C491">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>添加物</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C492">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive</term>
+            <termNote type="partOfSpeech">adjective</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>付加的</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C493">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive action</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>相加作用</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C494">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive color mixing</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>加法混色</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C495">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>additive effect</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>相加効果</term>
+            <note>薬の</note>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C496">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adduction</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>内転</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C497">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adductor</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>内転筋</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C498">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adductor muscle</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>内転筋</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C499">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adductor reflex</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>内転筋反射</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C500">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenin</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アデニン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C501">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenin arabinoside</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アデニンアラビノシド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C502">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenin phosphoribosyltransferase</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アデニンホスホリボシルトランスフェラーゼ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C503">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenine nucleotide translocator</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>アデニンヌクレオチド・トランスロケータ</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C504">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenitis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺炎</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C505">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenization</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺化</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C506">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenoacanthoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺棘細胞腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C507">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenoacanthoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺表皮癌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C508">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenocancroid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺カンクロイド</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C509">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenocancroid</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺表皮癌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C510">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenocarcinoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺癌</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C511">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenocystoma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺嚢腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C512">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenofibroma</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺線維腫</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C513">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenofibrosis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺線維症</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C514">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenohypophyseal hormone</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>下垂体前葉ホルモン</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C515">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenohypophysis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺下垂体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C516">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenohypopophysis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>腺下垂体</term>
+          </tig>
+        </langSet>
+      </termEntry>
+      <termEntry id="C517">
+        <langSet xml:lang="en-US">
+          <tig>
+            <term>adenohypopophysis</term>
+            <termNote type="partOfSpeech">noun</termNote>
+          </tig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <tig>
+            <term>下垂体前葉</term>
+          </tig>
+        </langSet>
+      </termEntry>
+    </body>
+  </text>
+</martif>

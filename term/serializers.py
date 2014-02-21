@@ -11,7 +11,7 @@ class SubjectFieldSerializer(ModelSerializer):
 class ConceptSerializer(ModelSerializer):
     class Meta:
         model = Concept
-        fields = ('id', 'concept_id', 'definition', 'subject_fields')
+        fields = ('id', 'concept_id', 'definition', 'subject_fields', 'lexemes')
 
 
 class NoteSerializer(ModelSerializer):

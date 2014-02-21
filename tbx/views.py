@@ -149,6 +149,13 @@ def import_term_entry(term_entry):
         concept = Concept(concept_id=concept_id)
         concept.save()
         print("created concept: {}".format(concept_id))
+    else:
+        print("recieved exisiting concept")
+        # TODO in the future determine whether the concept has
+        # a subset of information already contained in the db.
+        # For now simply create a new concept
+        concept = Concept()
+        concept.save()
 
     import_definitions(term_entry, concept)
     import_subject_fields(term_entry, concept)
@@ -193,8 +200,11 @@ def import_lang_set(lang_set, concept):
     lang = get_or_none(Language, lang_code=lang_code, region_code=reg_code)
     if not lang:
         # if the language doesn't already exist, create it
-        # (use langCode for name, user can change it later)
-        lang = Language(lang_code=lang_code, name=lang_code, region_code=reg_code)
+        # (use langCode for name, user can change it later
+        lang_name = lang_code
+        if reg_code:
+            lang_name += "_" + reg_code
+        lang = Language(lang_code=lang_code, name=lang_name, region_code=reg_code)
         lang.save()
         print("created language: {}".format(lang_code))
 
@@ -216,9 +226,9 @@ def import_term(tig, lang, concept):
         lex_class = LexicalClass(name=pos, language=lang)
         lex_class.save()
         print("created lexical class: {}".format(pos))
-    lexeme = get_or_none(Lexeme, lex_class=lex_class, concept=concept)
+    lexeme = get_or_none(Lexeme, lexical_class=lex_class, concept=concept)
     if not lexeme:
-        lexeme = Lexeme(language=lang, lex_class=lex_class, concept=concept)
+        lexeme = Lexeme(language=lang, lexical_class=lex_class, concept=concept)
         lexeme.save()
         #print(u"created lexeme for term: {}".format(term))
     else:

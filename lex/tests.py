@@ -31,7 +31,7 @@ class UniqueFeatureConstraintTest(TestCase):
         lang = Language.objects.create(lang_code="la", name="latintest")
         pos = LexicalClass.objects.create(language=lang, name="postest")
         conc = Concept.objects.create()
-        lex = Lexeme.objects.create(lex_class=pos, concept=conc)
+        lex = Lexeme.objects.create(lexical_class=pos, concept=conc)
 
         terra = Form.objects.create(lexeme=lex, name="nom fem sing")
         terra.features.add(nom)

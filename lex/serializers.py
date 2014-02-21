@@ -22,8 +22,8 @@ class LexemeSerializer(ModelSerializer):
     class Meta:
         model = Lexeme
         fields = (
-            'id', 'lex_id', 'lex_class',
-            'concept', 'forms', 'lexical_forms', 'notes', 'collections')
+            'id', 'lex_id', 'lexical_class',
+            'concept')  #, 'forms', 'lexical_forms', 'notes', 'collections')
 
 
 class LexicalFormSerializer(ModelSerializer):
