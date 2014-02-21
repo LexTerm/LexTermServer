@@ -7,7 +7,8 @@ from lex.models import Language, LexicalClass, Lexeme, \
 from lex.serializers import LanguageSerializer, LexicalClassSerializer, \
     LexemeSerializer, FormSerializer, FeatureValueSerializer, \
     FeatureSerializer, RepresentationSerializer, RepresentationTypeSerializer,\
-    CollectionSerialzer, LexicalFormSerializer
+    CollectionSerialzer, LexicalFormSerializer, LexicalClassListSerializer, \
+    LexemeListSerializer, FormListSerializer, CollectionListSerialzer
 from lex.filters import LanguageFilter, LexicalClassFilter, LexemeFilter, \
     FormFilter, FeatureValueFilter, FeatureFilter, RepresentationFilter, \
     RepresentationTypeFilter, CollectionFilter, LexicalFormFilter
@@ -45,6 +46,12 @@ class LexicalClassView(ModelViewSet):
     serializer_class = LexicalClassSerializer
     filter_class = LexicalClassFilter
 
+    def list(self, request):
+        query = self.get_queryset()
+        query = LexicalClassFilter(request.GET, query)
+        serializer = LexicalClassListSerializer(query)
+        return Response(serializer.data)
+
     @link()
     def forms(self, request, pk=None):
         obj = self.get_object()
@@ -63,6 +70,12 @@ class LexemeView(ModelViewSet):
     serializer_class = LexemeSerializer
     filter_class = LexemeFilter
 
+    def list(self, request):
+        query = self.get_queryset()
+        query = LexemeFilter(request.GET, query)
+        serializer = LexemeListSerializer(query)
+        return Response(serializer.data)
+
     @link()
     def forms(self, request, pk=None):
         obj = self.get_object()
@@ -80,6 +93,12 @@ class FormView(ModelViewSet):
     model = Form
     serializer_class = FormSerializer
     filter_class = FormFilter
+
+    def list(self, request):
+        query = self.get_queryset()
+        query = FormFilter(request.GET, query)
+        serializer = FormListSerializer(query)
+        return Response(serializer.data)
 
 
 class LexicalFormView(ModelViewSet):
@@ -116,3 +135,9 @@ class CollectionView(ModelViewSet):
     model = Collection
     serializer_class = CollectionSerialzer
     filter_class = CollectionFilter
+
+    def list(self, request):
+        query = self.get_queryset()
+        query = CollectionFilter(request.GET, query)
+        serializer = CollectionListSerialzer(query)
+        return Response(serializer.data)
