@@ -8,7 +8,8 @@ from lex.serializers import LanguageSerializer, LexicalClassSerializer, \
     LexemeSerializer, FormSerializer, FeatureValueSerializer, \
     FeatureSerializer, RepresentationSerializer, RepresentationTypeSerializer,\
     CollectionSerialzer, LexicalFormSerializer, LexicalClassListSerializer, \
-    LexemeListSerializer, FormListSerializer, CollectionListSerialzer
+    LexemeListSerializer, FormListSerializer, CollectionListSerialzer, \
+    LexicalFormListSerializer
 from lex.filters import LanguageFilter, LexicalClassFilter, LexemeFilter, \
     FormFilter, FeatureValueFilter, FeatureFilter, RepresentationFilter, \
     RepresentationTypeFilter, CollectionFilter, LexicalFormFilter
@@ -46,11 +47,11 @@ class LexicalClassView(ModelViewSet):
     serializer_class = LexicalClassSerializer
     filter_class = LexicalClassFilter
 
-    def list(self, request):
-        query = self.get_queryset()
-        query = LexicalClassFilter(request.GET, query)
-        serializer = LexicalClassListSerializer(query)
-        return Response(serializer.data)
+    #def list(self, request):
+        #query = self.get_queryset()
+        #query = LexicalClassFilter(request.GET, query)
+        #serializer = LexicalClassListSerializer(query)
+        #return Response(serializer.data)
 
     @link()
     def forms(self, request, pk=None):
@@ -70,11 +71,11 @@ class LexemeView(ModelViewSet):
     serializer_class = LexemeSerializer
     filter_class = LexemeFilter
 
-    def list(self, request):
-        query = self.get_queryset()
-        query = LexemeFilter(request.GET, query)
-        serializer = LexemeListSerializer(query)
-        return Response(serializer.data)
+    #def list(self, request):
+        #query = self.get_queryset()
+        #query = LexemeFilter(request.GET, query)
+        #serializer = LexemeListSerializer(query)
+        #return Response(serializer.data)
 
     @link()
     def forms(self, request, pk=None):
@@ -94,17 +95,23 @@ class FormView(ModelViewSet):
     serializer_class = FormSerializer
     filter_class = FormFilter
 
-    def list(self, request):
-        query = self.get_queryset()
-        query = FormFilter(request.GET, query)
-        serializer = FormListSerializer(query)
-        return Response(serializer.data)
+    #def list(self, request):
+        #query = self.get_queryset()
+        #query = FormFilter(request.GET, query)
+        #serializer = FormListSerializer(query)
+        #return Response(serializer.data)
 
 
 class LexicalFormView(ModelViewSet):
     model = LexicalForm
     serializer_class = LexicalFormSerializer
     filter_class = LexicalFormFilter
+
+    #def list(self, request):
+        #query = self.get_queryset()
+        #query = LexicalFormFilter(request.GET, query)
+        #serializer = LexicalFormListSerializer(query)
+        #return Response(serializer.data)
 
 
 class FeatureValueView(ModelViewSet):

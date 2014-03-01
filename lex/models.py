@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
-from django.db.models.signals import m2m_changed
+from django.utils.translation import ugettext as _
+from django.db.models.signals import m2m_changed, post_save
 from django.dispatch import receiver
 
 
@@ -17,7 +18,8 @@ class Language(models.Model):
     # ISO 639-6 is the current longest possible code
     lang_code = models.CharField(db_index=True, max_length=4)
     # ISO 3166-1 alpha-3 is the current longest code
-    region_code = models.CharField(db_index=True, max_length=3, blank=True, default='')
+    region_code = models.CharField(
+        db_index=True, max_length=3, blank=True, default='')
     name = models.CharField(max_length=100)
 
     class Meta:
@@ -39,8 +41,9 @@ class Language(models.Model):
 
     @property
     def representation_types(self):
+        s = self
         return RepresentationType.objects.filter(
-            representations__lexical_form__lexeme__lexical_class__language=self)
+            representations__lexical_form__lexeme__lexical_class__language=s)
 
     def __unicode__(self):
         return u"{}".format(self.locale)
@@ -52,7 +55,8 @@ class LexicalClass(models.Model):
     as traditional parts of speech (e.g. noun, verb, adjective).
     """
     name = models.CharField(max_length=100)
-    language = models.ForeignKey(Language, db_index=True, related_name="lexical_classes")
+    language = models.ForeignKey(
+        Language, db_index=True, related_name="lexical_classes")
 
     class Meta:
         verbose_name_plural = "Lexical Classes"
@@ -64,7 +68,8 @@ class LexicalClass(models.Model):
 
     @property
     def features(self):
-        return Feature.objects.filter(values__forms__lexemes__lexical_class=self)
+        return Feature.objects.filter(
+            values__forms__lexemes__lexical_class=self)
 
     def __unicode__(self):
         return u"{}: {}".format(self.language.locale, self.name)
@@ -81,9 +86,12 @@ class Lexeme(models.Model):
     (which implies a particular language) and a particular concept.
     """
 
-    lex_id = models.CharField(max_length=100, db_index=True, unique=True, blank=True)
-    lexical_class = models.ForeignKey(LexicalClass, db_index=True, related_name="lexemes")
-    concept = models.ForeignKey('term.Concept', db_index=True, related_name='lexemes')
+    lex_id = models.CharField(
+        max_length=100, db_index=True, unique=True, blank=True)
+    lexical_class = models.ForeignKey(
+        LexicalClass, db_index=True, related_name="lexemes")
+    concept = models.ForeignKey(
+        'term.Concept', db_index=True, related_name='lexemes')
 
     @property
     def language(self):
@@ -117,7 +125,8 @@ class FeatureValue(models.Model):
     """
 
     name = models.CharField(max_length=100)
-    feature = models.ForeignKey(Feature, db_index=True, related_name='featurevalues')
+    feature = models.ForeignKey(
+        Feature, db_index=True, related_name='featurevalues')
 
     class Meta:
         verbose_name_plural = "Feature Values"
@@ -138,10 +147,11 @@ class Form(models.Model):
 
     name = models.CharField(max_length=100)
     # features are instances (values) of the features that the form uses
-    features = models.ManyToManyField(FeatureValue, db_index=True, related_name="forms")
+    features = models.ManyToManyField(
+        FeatureValue, db_index=True, related_name="forms")
     lexemes = models.ManyToManyField(
         Lexeme,
-        db_index=True, 
+        db_index=True,
         related_name='forms',
         through='LexicalForm')
 
@@ -162,7 +172,8 @@ class LexicalForm(models.Model):
     of forms via lexemes.
     """
 
-    lexeme = models.ForeignKey(Lexeme, db_index=True, related_name="lexical_forms")
+    lexeme = models.ForeignKey(
+        Lexeme, db_index=True, related_name="lexical_forms")
     form = models.ForeignKey(Form, db_index=True, related_name="lexical_forms")
     is_lemma = models.BooleanField(db_index=True)
 
@@ -211,11 +222,11 @@ class Representation(models.Model):
     """
     lexical_form = models.ForeignKey(
         LexicalForm,
-        db_index=True, 
+        db_index=True,
         related_name="representations")
     representation_type = models.ForeignKey(
         RepresentationType,
-        db_index=True, 
+        db_index=True,
         related_name="representations")
     name = models.CharField(max_length=100)
 
@@ -236,8 +247,10 @@ class Collection(models.Model):
     """
     A collection of lexemes to help manage portions of the data.
     """
-    name = models.CharField(max_length=50)
-    lexemes = models.ManyToManyField(Lexeme, db_index=True, related_name="collections")
+    name = models.CharField(
+        max_length=50, unique=True)  # TODO unique now, unique by user later
+    lexemes = models.ManyToManyField(
+        Lexeme, db_index=True, related_name="collections")
 
     def __unicode__(self):
         return u"{}".format(self.name)
@@ -261,3 +274,11 @@ def limit_feature_combinations(sender, **kwargs):
                 kwargs['instance'].features.remove(value)
             else:
                 existing.append(value)
+
+
+# create and update a reference collection of every lexeme
+@receiver(post_save, sender=Lexeme)
+def sync_all_collection(sender, instance, created, **kwargs):
+    if (created):
+        allcol, colcreated = Collection.objects.get_or_create(name=_("All"))
+        allcol.lexemes.add(instance)
