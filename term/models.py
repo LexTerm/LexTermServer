@@ -1,6 +1,6 @@
 import uuid
 from django.db import models
-from rest_framework.reverse import reverse
+from lex.models import Lexeme
 
 
 class SubjectField(models.Model):
@@ -13,11 +13,8 @@ class SubjectField(models.Model):
     class Meta:
         verbose_name_plural = "Subject Fields"
 
-    def get_absolute_url(self, request):
-        return reverse(
-            'subject_detail',
-            request=request,
-            kwargs={'name': self.name})
+    def get_lexemes(self):
+        return Lexeme.objects.filter(concepts__subject_fields=self)
 
     def __unicode__(self):
         return u"SubjectField<{}>".format(self.id)
@@ -34,6 +31,9 @@ class Concept(models.Model):
         SubjectField,
         related_name="concepts")
     definition = models.TextField(blank=True)
+
+    def get_lexemes(self):
+        return self.lexemes.all()
 
     def save(self, *args, **kwargs):
         if not self.concept_id:
@@ -55,3 +55,6 @@ class Note(models.Model):
     lexeme = models.ForeignKey('lex.Lexeme', related_name='notes')
     note_type = models.CharField(max_length=100)
     note = models.TextField()
+
+    def get_lexemes(self):
+        return [self.lexeme]

@@ -45,6 +45,13 @@ class Language(models.Model):
         return RepresentationType.objects.filter(
             representations__lexical_form__lexeme__lexical_class__language=s)
 
+    def get_lexemes(self):
+        """
+        Function hook for indexing, this returns the same as the lexemes
+        property but with a more consistent interface across models.
+        """
+        return self.lexemes
+
     def __unicode__(self):
         return u"{}".format(self.locale)
 
@@ -70,6 +77,9 @@ class LexicalClass(models.Model):
     def features(self):
         return Feature.objects.filter(
             values__forms__lexemes__lexical_class=self)
+
+    def get_lexemes(self):
+        return self.lexemes.all()
 
     def __unicode__(self):
         return u"{}: {}".format(self.language.locale, self.name)
@@ -97,6 +107,9 @@ class Lexeme(models.Model):
     def language(self):
         return self.lexical_class.language
 
+    def get_lexemes(self):
+        return [self]
+
     def save(self, *args, **kwargs):
         if not self.lex_id:
             self.lex_id = uuid.uuid4().hex[:8]
@@ -112,6 +125,9 @@ class Feature(models.Model):
     such as Number, Gender, or Case.
     """
     name = models.CharField(max_length=100)
+
+    def get_lexemes(self):
+        return Lexeme.objects.filter(forms__features__feature=self)
 
     def __unicode__(self):
         return u"{}".format(self.name)
@@ -131,6 +147,9 @@ class FeatureValue(models.Model):
     class Meta:
         verbose_name_plural = "Feature Values"
         unique_together = ('name', 'feature')
+
+    def get_lexemes(self):
+        return Lexeme.objects.filter(forms__features=self)
 
     def __unicode__(self):
         return u"{}".format(self.name)
@@ -159,6 +178,9 @@ class Form(models.Model):
     def lexical_classes(self):
         return LexicalClass.objects.filter(lexemes__forms=self)
 
+    def get_lexemes(self):
+        return self.lexemes.all()
+
     def __unicode__(self):
         return u"{}".format(self.name)
 
@@ -176,6 +198,9 @@ class LexicalForm(models.Model):
         Lexeme, db_index=True, related_name="lexical_forms")
     form = models.ForeignKey(Form, db_index=True, related_name="lexical_forms")
     is_lemma = models.BooleanField(db_index=True)
+
+    def get_lexemes(self):
+        return [self.lexeme]
 
     def save(self, *args, **kwargs):
         # if necessary toggle lemma status
@@ -211,6 +236,10 @@ class RepresentationType(models.Model):
     class Meta:
         verbose_name_plural = "Representation Types"
 
+    def get_lexemes(self):
+        return Lexeme.objects.filter(
+            lexical_forms__representations__representation_type=self)
+
     def __unicode__(self):
         return u"{}".format(self.name)
 
@@ -237,6 +266,9 @@ class Representation(models.Model):
     def lexeme(self):
         return self.lexical_form.lexeme
 
+    def get_lexemes(self):
+        return [self.lexeme]
+
     def __unicode__(self):
         return u"{}: {}".format(
             self.representation_type.name,
@@ -251,6 +283,9 @@ class Collection(models.Model):
         max_length=50, unique=True)  # TODO unique now, unique by user later
     lexemes = models.ManyToManyField(
         Lexeme, db_index=True, related_name="collections")
+
+    def get_lexemes(self):
+        return self.lexemes.all()
 
     def __unicode__(self):
         return u"{}".format(self.name)
@@ -282,3 +317,16 @@ def sync_all_collection(sender, instance, created, **kwargs):
     if (created):
         allcol, colcreated = Collection.objects.get_or_create(name=_("All"))
         allcol.lexemes.add(instance)
+
+
+# update the index anytime the "entries" change
+@receiver(post_save)
+def sync_index(sender, instance, created, **kwargs):
+    # es_index(instance.get_lexemes())
+    print('syncing to index')
+
+
+@receiver(m2m_changed)
+def sync_index_many(sender, instance, **kwargs):
+    # es_index(instance.get_lexemes())
+    print('syncing many to many to index')
