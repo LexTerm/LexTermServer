@@ -185,10 +185,10 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
-        'django.db.backends': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-        },
+        #'django.db.backends': {
+            #'level': 'DEBUG',
+            #'handlers': ['console'],
+        #},
         '': {
             'handlers': ['console'],
             'level': 'DEBUG',
@@ -200,6 +200,9 @@ LOGGING = {
 FIXTURE_DIRS = (
     ROOT('fixtures'),
 )
+
+# Elasticsearch Index settings
+LIVE_INDEX=True
 
 DEBUG_APPS = None
 try:

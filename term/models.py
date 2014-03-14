@@ -14,7 +14,7 @@ class SubjectField(models.Model):
         verbose_name_plural = "Subject Fields"
 
     def get_lexemes(self):
-        return Lexeme.objects.filter(concepts__subject_fields=self)
+        return Lexeme.objects.filter(concept__subject_fields=self)
 
     def __unicode__(self):
         return u"SubjectField<{}>".format(self.id)

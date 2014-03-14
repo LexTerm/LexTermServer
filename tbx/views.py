@@ -11,6 +11,8 @@ from rest_framework.decorators import api_view
 from django.template.loader import get_template
 from django.http import HttpResponse
 from django.template.context import Context
+from django.conf import settings
+from search.index import rebuild_index
 import re
 from os import path
 
@@ -23,7 +25,8 @@ except ImportError:
 import logging
 logger = logging.getLogger(__name__)
 
-TBX_BASIC_PLACEHOLDER = "tbx_basic_term"
+FORM_PLACEHOLDER = "*"
+LEXICAL_CLASS_PLACEHOLDER = "*"
 WRITTEN_REP_TYPE = "written"
 
 
@@ -85,12 +88,16 @@ class TBXImportView(GenericAPIView):
         serializer = FileSerializer(files=request.FILES)
         if serializer.is_valid():
             logger.debug("Got TBX file, starting import")
+            settings.LIVE_INDEX = False
             try:
                 import_tbx(serializer.object['file'])
             except Exception as e:
                 logger.exception("Error importing TBX file")
                 return Response("Error importing TBX file: {}".format(e),
                                 status=HTTP_400_BAD_REQUEST)
+            finally:
+                settings.LIVE_INDEX = True
+            rebuild_index()
             return Response("Successfully uploaded TBX file", status=HTTP_202_ACCEPTED)
         else:
             return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
@@ -218,7 +225,7 @@ def import_term(tig, lang, concept):
     # TODO: add all termNotes
     pos = tig.findtext("./termNote[@type='partOfSpeech']")
     if not pos:
-        pos = "*"  # Special character for pos
+        pos = LEXICAL_CLASS_PLACEHOLDER  # Special character for pos
     pos = pos.lower()
     lex_class = get_or_none(LexicalClass, name=pos, language=lang)
     if not lex_class:
@@ -238,9 +245,9 @@ def import_term(tig, lang, concept):
 
     # we can't know what form to create, just use a placeholder until the user changes it
     # first check if the placeholder has already been created
-    tbx_form = get_or_none(Form, name=TBX_BASIC_PLACEHOLDER)
+    tbx_form = get_or_none(Form, name=FORM_PLACEHOLDER)
     if not tbx_form:
-        tbx_form = Form(name=TBX_BASIC_PLACEHOLDER)
+        tbx_form = Form(name=FORM_PLACEHOLDER)
         tbx_form.save()
 
     lexical_form = get_or_none(LexicalForm, form=tbx_form, lexeme=lexeme)

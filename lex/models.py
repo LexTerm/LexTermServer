@@ -3,6 +3,8 @@ from django.db import models
 from django.utils.translation import ugettext as _
 from django.db.models.signals import m2m_changed, post_save
 from django.dispatch import receiver
+from django.conf import settings
+from search.index import index_entries
 
 
 class Language(models.Model):
@@ -322,11 +324,16 @@ def sync_all_collection(sender, instance, created, **kwargs):
 # update the index anytime the "entries" change
 @receiver(post_save)
 def sync_index(sender, instance, created, **kwargs):
-    # es_index(instance.get_lexemes())
-    print('syncing to index')
-
+    try:
+        if settings.LIVE_INDEX:
+            index_entries(instance.get_lexemes())
+    except AttributeError:
+        print('unindexable type', sender)
 
 @receiver(m2m_changed)
 def sync_index_many(sender, instance, **kwargs):
-    # es_index(instance.get_lexemes())
-    print('syncing many to many to index')
+    try:
+        if settings.LIVE_INDEX:
+            index_entries(instance.get_lexemes())
+    except AttributeError:
+        print('unindexable type', sender)
