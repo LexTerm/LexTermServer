@@ -38,7 +38,7 @@ class LanguageView(ModelViewSet):
     @link()
     def lexical_classes(self, request, pk=None):
         obj = self.get_object()
-        serializer = LexicalClassSerializer(obj.lexical_classes)
+        serializer = LexicalClassSerializer(obj.lexical_classes.all())
         return Response(serializer.data)
 
 
@@ -63,6 +63,12 @@ class LexicalClassView(ModelViewSet):
     def features(self, request, pk=None):
         obj = self.get_object()
         serializer = FeatureSerializer(obj.features)
+        return Response(serializer.data)
+
+    @link()
+    def lexemes(self, request, pk=None):
+        obj = self.get_object()
+        serializer = LexemeSerializer(obj.lexemes.all())
         return Response(serializer.data)
 
 
@@ -94,6 +100,18 @@ class FormView(ModelViewSet):
     model = Form
     serializer_class = FormSerializer
     filter_class = FormFilter
+
+    @link()
+    def lexical_forms(self, request, pk=None):
+        obj = self.get_object()
+        serializer = LexicalFormSerializer(obj.lexical_forms.all())
+        return Response(serializer.data)
+
+    @link()
+    def features(self, request, pk=None):
+        obj = self.get_object()
+        serializer = FeatureValueSerializer(obj.features.all())
+        return Response(serializer.data)
 
     #def list(self, request):
         #query = self.get_queryset()
@@ -137,14 +155,20 @@ class RepresentationTypeView(ModelViewSet):
     serializer_class = RepresentationTypeSerializer
     filter_class = RepresentationTypeFilter
 
+    @link()
+    def representations(self, request, pk=None):
+        obj = self.get_object()
+        serializer = RepresentationSerializer(obj.representations.all())
+        return Response(serializer.data)
+
 
 class CollectionView(ModelViewSet):
     model = Collection
     serializer_class = CollectionSerialzer
     filter_class = CollectionFilter
 
-    def list(self, request):
-        query = self.get_queryset()
-        query = CollectionFilter(request.GET, query)
-        serializer = CollectionListSerialzer(query)
-        return Response(serializer.data)
+    #def list(self, request):
+        #query = self.get_queryset()
+        #query = CollectionFilter(request.GET, query)
+        #serializer = CollectionListSerialzer(query)
+        #return Response(serializer.data)

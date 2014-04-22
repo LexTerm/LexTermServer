@@ -12,7 +12,7 @@ from django.template.loader import get_template
 from django.http import HttpResponse
 from django.template.context import Context
 from django.conf import settings
-from search.index import rebuild_index
+from search.index import rebuild_index, index_entries
 import re
 from os import path
 
@@ -48,7 +48,8 @@ def get_schema():
     return schema
 
 
-class FileSerializer(serializers.Serializer):
+class TBXFileSerializer(serializers.Serializer):
+    collection = serializers.CharField(required=False)
     file = serializers.FileField(allow_empty_file=False)
 
 
@@ -57,9 +58,9 @@ class ValidateView(GenericAPIView):
     """ Upload and XML document for TBX-Basic validation.
 
         file: the tbx file for validation
-     """
+    """
 
-    serializer_class = FileSerializer
+    serializer_class = TBXFileSerializer
 
     def post(self, request):
 
@@ -82,22 +83,27 @@ class TBXImportView(GenericAPIView):
 
     """ Upload a TBX file to import """
 
-    serializer_class = FileSerializer
+    serializer_class = TBXFileSerializer
 
     def post(self, request, format=None):
-        serializer = FileSerializer(files=request.FILES)
+        serializer = TBXFileSerializer(request.POST, files=request.FILES)
         if serializer.is_valid():
             logger.debug("Got TBX file, starting import")
             settings.LIVE_INDEX = False
+            new_lexemes = []
             try:
-                import_tbx(serializer.object['file'])
+                import_tbx(
+                    serializer.object['file'],
+                    collction_name=serializer.object['collection'],
+                    new_lexemes=new_lexemes)
             except Exception as e:
                 logger.exception("Error importing TBX file")
                 return Response("Error importing TBX file: {}".format(e),
                                 status=HTTP_400_BAD_REQUEST)
             finally:
                 settings.LIVE_INDEX = True
-            rebuild_index()
+            #rebuild_index()
+            index_entries(new_lexemes)
             return Response("Successfully uploaded TBX file", status=HTTP_202_ACCEPTED)
         else:
             return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
@@ -138,16 +144,16 @@ class TBXExportView(APIView):
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
 
-def import_tbx(tbx_file):
+def import_tbx(tbx_file, **kwargs):
     parser = etree.XMLParser(remove_blank_text=True)
     root = etree.parse(tbx_file, parser).getroot()
 
     # iterate over all term entries and import
     for term_entry in root.iter('termEntry'):
-        import_term_entry(term_entry)
+        import_term_entry(term_entry, **kwargs)
 
 
-def import_term_entry(term_entry):
+def import_term_entry(term_entry, **kwargs):
     concept_id = term_entry.get('id')
     print("importing termEntry: {}".format(concept_id))
     concept = get_or_none(Concept, concept_id=concept_id)
@@ -168,7 +174,7 @@ def import_term_entry(term_entry):
     import_subject_fields(term_entry, concept)
 
     for lang_set in term_entry.iterchildren('langSet'):
-        import_lang_set(lang_set, concept)
+        import_lang_set(lang_set, concept, **kwargs)
 
 
 def import_definitions(term_entry, concept):
@@ -195,7 +201,7 @@ def import_subject_fields(term_entry, concept):
     pass
 
 
-def import_lang_set(lang_set, concept):
+def import_lang_set(lang_set, concept, **kwargs):
     code = lang_set.get(XML_NS + 'lang').lower()
     # get rid of locale codes for now (en-gb ==> en)
     code = code.split('-', 1)
@@ -216,10 +222,10 @@ def import_lang_set(lang_set, concept):
         print("created language: {}".format(lang_code))
 
     for tig in lang_set.iterchildren('tig'):
-        import_term(tig, lang, concept)
+        import_term(tig, lang, concept, **kwargs)
 
 
-def import_term(tig, lang, concept):
+def import_term(tig, lang, concept, **kwargs):
     term = tig.findtext('./term')
     #print(u"importing term: {}".format(term))
     # TODO: add all termNotes
@@ -237,7 +243,11 @@ def import_term(tig, lang, concept):
     if not lexeme:
         lexeme = Lexeme(language=lang, lexical_class=lex_class, concept=concept)
         lexeme.save()
-        #print(u"created lexeme for term: {}".format(term))
+        kwargs.get('new_lexemes', []).append(lexeme)  # if no global list is passed, the lexeme is not recorded
+        if kwargs.get('collction_name'):
+            collection = get_or_none(Collection, name=kwargs.get('collection_name'))
+            if collection:
+                collection.lexemes.add(lexeme)
     else:
         # TBX standard (ISO 30042) says that terms are defined as being in lemma / citation form
         # So if we have the lexeme, the term should already exist in the db

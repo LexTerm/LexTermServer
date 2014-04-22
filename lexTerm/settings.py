@@ -202,7 +202,7 @@ FIXTURE_DIRS = (
 )
 
 # Elasticsearch Index settings
-LIVE_INDEX=True
+LIVE_INDEX = True
 
 DEBUG_APPS = None
 try:

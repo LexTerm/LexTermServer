@@ -1,8 +1,11 @@
 from django.forms.models import model_to_dict as mtd
 from elasticsearch import Elasticsearch
+from elasticsearch.helpers import bulk
+
 from term.models import *
 
 es = Elasticsearch()
+
 
 def create_index():
     es.indices.create(
@@ -106,7 +109,9 @@ def create_index():
         }
     )
 
+
 def index_entries(lexemes):
+    entries = []
     for lex in lexemes:
         entry = mtd(lex)
         lex_class = mtd(lex.lexical_class)
@@ -145,7 +150,12 @@ def index_entries(lexemes):
                 form['features'][ind] = value_dict
             lex_form_dict['form'] = form
             entry['lexical_forms'].append(lex_form_dict)
-        es.index(body=entry, id=lex.id, index='ltm-entries', doc_type='entry', refresh=True)
+        entries.append({
+            "_type": 'entry',
+            "_id": lex.id,
+            "_source": entry})
+    bulk(es, entries, index='ltm-entries')
+
 
 def rebuild_index():
     # avoid circular import
@@ -153,6 +163,17 @@ def rebuild_index():
     es.indices.delete(index="_all")
     create_index()
     index_entries(Lexeme.objects.all())
+
+
+def remove_entries(lexemes):
+    body = {
+        "query": {
+            "terms": {
+                "id": [lex.id for lex in lexemes]
+            }
+        }
+    }
+    es.delete_by_query(body=body, index="ltm-entries", doc_type="entry")
 
 try:
     create_index()

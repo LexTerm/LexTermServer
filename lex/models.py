@@ -1,10 +1,10 @@
 import uuid
 from django.db import models
 from django.utils.translation import ugettext as _
-from django.db.models.signals import m2m_changed, post_save
+from django.db.models.signals import m2m_changed, post_save, post_delete
 from django.dispatch import receiver
 from django.conf import settings
-from search.index import index_entries
+from search.index import index_entries, remove_entries
 
 
 class Language(models.Model):
@@ -210,8 +210,7 @@ class LexicalForm(models.Model):
             try:
                 lemma = LexicalForm.objects.get(
                     is_lemma=True,
-                    lexeme=self.lexeme,
-                    form=self.form)
+                    lexeme=self.lexeme)
                 if self != lemma:
                     lemma.is_lemma = False
                     lemma.save()
@@ -298,7 +297,7 @@ def limit_feature_combinations(sender, **kwargs):
     if kwargs['action'] == "pre_add":
         # clear out any feature values that have the same feature as the new
         for pk in kwargs['pk_set']:
-            feature = Feature.objects.get(values__pk=pk)
+            feature = Feature.objects.get(featurevalues__pk=pk)
             for old_value in kwargs['instance'].features.all():
                 if old_value.feature == feature:
                     kwargs['instance'].features.remove(old_value)
@@ -330,6 +329,7 @@ def sync_index(sender, instance, created, **kwargs):
     except AttributeError:
         print('unindexable type', sender)
 
+
 @receiver(m2m_changed)
 def sync_index_many(sender, instance, **kwargs):
     try:
@@ -337,3 +337,8 @@ def sync_index_many(sender, instance, **kwargs):
             index_entries(instance.get_lexemes())
     except AttributeError:
         print('unindexable type', sender)
+
+
+@receiver(post_delete, sender=Lexeme)
+def unindex(sender, instance, **kwargs):
+    remove_entries([instance])
