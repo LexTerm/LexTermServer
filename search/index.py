@@ -5,11 +5,7 @@ from elasticsearch.helpers import bulk
 from term.models import *
 from django.conf import settings
 
-print settings.ES_HOST
-print settings.ES_PORT
 es = Elasticsearch(settings.ES_HOST + ":" + str(settings.ES_PORT))
-
-print(es)
 
 
 def create_index():
