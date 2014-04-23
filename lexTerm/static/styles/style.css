@@ -1,0 +1,120 @@
+
+a {
+    cursor: pointer;
+    color: #778193;
+}
+
+th {
+    background: #f8f8f8;
+}
+
+#sidebar {
+    background: #f8f8f8;
+    border: 1px solid #dcdcdc;
+}
+
+#sidebar li a {
+    border-radius: 0px;
+    color: #555555;
+}
+
+#sidebar .active a,
+#sidebar .active a:hover {
+    background: #555555;
+    border-color: #e7e7e7;
+    color: #ffffff;
+}
+
+.lexlink {
+    background: #e7e7e7;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 1%;
+}
+
+.lexlink:hover {
+    text-decoration: none;
+}
+
+.pagination li a {
+    color: #555555;
+}
+
+.pagination .active a,
+.pagination .active a:hover {
+    background: #555555;
+    border-color: #e7e7e7;
+}
+
+.entry-header {
+    background: #f8f8f8;
+    padding: 1%;
+    border: 1px solid #dcdcdc;
+    margin-top: 0px;
+}
+
+.lexical-entry {
+    background: white;
+    padding: 1%;
+    border: 1px solid #dcdcdc;
+    margin-top: 0px;
+}
+
+.subject-field-list {
+    margin-bottom: 0px;
+}
+
+.collection-header {
+    padding: 1%;
+    margin: 1% 2%;
+    border: 1px solid #dcdcdc;
+    margin-top: 0px;
+    background: #dae4f6;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 999px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.util {
+    color: #555555;
+}
+
+.util:hover {
+    color: #778193;
+}
+
+.entry-edit {
+    margin: 2%;
+    border-radius: 0px;
+    box-shadow: #dae4f6 0px 0px 5px 2px;
+}
+
+.subject-field .subject-field-name {
+    width: inherit;
+    display: inline-block;
+}
+
+.form-control.required {
+    background: #f8f8f8;
+}
+
+.ember-select-multi .ember-select-choices {
+    margin-bottom: -4px;
+}
