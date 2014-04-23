@@ -1,6 +1,5 @@
 import uuid
 from django.db import models
-from lex.models import Lexeme
 
 
 class SubjectField(models.Model):
@@ -14,6 +13,7 @@ class SubjectField(models.Model):
         verbose_name_plural = "Subject Fields"
 
     def get_lexemes(self):
+        from lex.models import Lexeme
         return Lexeme.objects.filter(concept__subject_fields=self)
 
     def __unicode__(self):
