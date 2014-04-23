@@ -206,7 +206,7 @@ LIVE_INDEX = True
 ES_HOST = 'localhost'
 ES_PORT = 9200
 
-DEBUG_APPS = None
+DEBUG_APPS = ()
 try:
     from local_settings import *  # NOQA
     INSTALLED_APPS += DEBUG_APPS
