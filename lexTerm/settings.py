@@ -203,6 +203,8 @@ FIXTURE_DIRS = (
 
 # Elasticsearch Index settings
 LIVE_INDEX = True
+ES_HOST = 'localhost'
+ES_PORT = 9200
 
 DEBUG_APPS = None
 try:
