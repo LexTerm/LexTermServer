@@ -31,7 +31,8 @@ Install all python dependencies in the virtual environment
 
 Initialize the sqlite database
 
-    ./manage.py syncdb
+    ./manage.py syncdb --all
+    ./manage.py migrate --fake
 
 ### Run it ###
 
