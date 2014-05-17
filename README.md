@@ -31,7 +31,8 @@ Install all python dependencies in the virtual environment
 
 Initialize the sqlite database
 
-    ./manage.py syncdb
+    ./manage.py syncdb --all
+    ./manage.py migrate --fake
 
 ### Run it ###
 
@@ -40,14 +41,8 @@ Initialize the sqlite database
 API Documentation
 -----------------
 
-API documentation can be found at http://docs.lexterm.apiary.io/
-
-Apiary provides a mock server which can be used for development. Here's an example of using it with
-cURL:
-
-    curl --include "http://lexterm.apiary.io/api"
-    
-The API documentation is written in markdown and stored in this repository [here](./apiary.apib)
+On a running server, navigate to /api to browse the API.
+Further documentation will be forthcoming. 
 
 Production
 ----------
