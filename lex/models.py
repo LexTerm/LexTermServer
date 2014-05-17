@@ -334,7 +334,12 @@ def sync_index(sender, instance, created, **kwargs):
 def sync_index_many(sender, instance, **kwargs):
     try:
         if settings.LIVE_INDEX:
-            index_entries(instance.get_lexemes())
+            if kwargs.get('model') == Lexeme and kwargs.get('pk_set'):
+                index_entries(
+                    [Lexeme.objects.get(pk=pk) for pk in kwargs.get('pk_set')]
+                )
+            else:
+                index_entries(instance.get_lexemes())
     except AttributeError:
         print('unindexable type', sender)
 
