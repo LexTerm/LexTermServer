@@ -167,11 +167,11 @@ class CollectionView(ModelViewSet):
     serializer_class = CollectionSerialzer
     filter_class = CollectionFilter
 
-    @link()
-    def lexemes(self, request, pk=None):
-        obj = self.get_object()
-        serializer = LexemeSerializer(obj.lexemes.all())
-        return Response(serializer.data)
+    #@link()
+    #def lexemes(self, request, pk=None):
+        #obj = self.get_object()
+        #serializer = LexemeSerializer(obj.lexemes.all())
+        #return Response(serializer.data)
 
     #def list(self, request):
         #query = self.get_queryset()
