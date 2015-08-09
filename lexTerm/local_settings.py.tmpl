@@ -1,0 +1,19 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lexterm',
+        'USER': 'username',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+    }
+}
+DEBUG_APPS = ('django_extensions',)
+
+ES_HOST = 'search.lexterm.elucitrans.com'
+ES_PORT = 80
+
+
+
+

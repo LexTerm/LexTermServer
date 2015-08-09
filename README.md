@@ -7,16 +7,14 @@ Development
 ### Prerequisites ###
 * Python (2.7)
 * pip
-  * `easy_install pip`
-* virtualenv
-  * `pip install virtualenv`
+* virtualenv (virtualenvwrapper is recommended)
 
 ### Setup ###
 
 Set up a python virtual environment however you want. Here's a simple way to do that:
 
     mkdir lexTerm && cd lexTerm
-    virtualenv --no-site-packages server 
+    virtualenv --no-site-packages server
     cd server
     source bin/activate
 
@@ -29,7 +27,13 @@ Install all python dependencies in the virtual environment
 
     pip install -r requirements.txt
 
-Initialize the sqlite database
+Copy settings template
+    
+    cp lexTerm/local_settings.py.tmpl lexTerm/local_settings.py
+    
+Edit local_settings.py to configure your database and other settings
+
+Initialize the database
 
     ./manage.py syncdb --all
     ./manage.py migrate --fake
@@ -42,7 +46,7 @@ API Documentation
 -----------------
 
 On a running server, navigate to /api to browse the API.
-Further documentation will be forthcoming. 
+Further documentation will be forthcoming.
 
 Production
 ----------
