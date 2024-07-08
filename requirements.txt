@@ -1,4 +1,4 @@
-Django==3.2.24
+Django==3.2.25
 Markdown==2.3.1
 South==0.8.4
 Werkzeug==3.0.3
