@@ -12,7 +12,7 @@ lxml==4.9.1
 psycopg2==2.5.2
 pydot==1.0.2
 pyparsing==2.0.1
-requests==2.31.0
+requests==2.32.2
 simplejson==3.3.3
 six==1.5.2
 urllib3==1.26.18
